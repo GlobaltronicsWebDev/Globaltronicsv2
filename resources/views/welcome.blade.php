@@ -8,11 +8,29 @@
     <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="{{ asset('assets/images/logos/global_logo.webp') }}" type="image/webp" fetchpriority="high">
+    <style>
+        #hero-carousel {
+            height: 560px;
+            min-height: 520px;
+        }
+        @media (min-width: 480px) {
+            #hero-carousel {
+                height: 620px;
+            }
+        }
+        @media (min-width: 768px) {
+            #hero-carousel {
+                height: calc(100vh - 116px);
+                min-height: 680px;
+                max-height: 920px;
+            }
+        }
+    </style>
 @endpush
 
 @section('content')
 <!-- Full-Screen Interactive Hero Carousel -->
-<div id="hero-carousel" class="relative w-full overflow-hidden bg-[#07011f] select-none h-[calc(100svh-80px)] md:h-[calc(100vh-116px)] min-h-[580px] md:min-h-[700px]" style="height: calc(100vh - 116px); min-height: 620px;">
+<div id="hero-carousel" class="relative w-full overflow-hidden bg-[#07011f] select-none">
 
     <!-- Slides Wrapper -->
     <div class="relative w-full h-full">
@@ -25,19 +43,19 @@
             </div>
 
             <!-- Content Container (Responsive for all phones up to ultrawide desktops) -->
-            <div class="relative h-full w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-14 flex flex-col md:flex-row items-center justify-between z-10 pt-3 sm:pt-6 md:pt-0 pb-10 sm:pb-14 md:pb-0">
+            <div class="relative h-full w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-14 flex flex-col md:flex-row items-center justify-center md:justify-between z-10 pt-4 sm:pt-6 md:pt-0 pb-10 sm:pb-12 md:pb-0 gap-2 xs:gap-3 sm:gap-4 md:gap-0">
                 
                 <!-- Left Section: Pioneer Text & 23 Years Emblem -->
                 <div class="w-full md:w-[46%] lg:w-[44%] xl:w-[42%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-4 lg:pl-10 xl:pl-16">
                     <!-- Pioneer Text -->
-                    <div class="w-full max-w-[230px] xs:max-w-[270px] sm:max-w-[360px] md:max-w-[480px] lg:max-w-[560px] xl:max-w-[620px]">
+                    <div class="w-full max-w-[270px] xs:max-w-[310px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[560px] xl:max-w-[620px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" 
                              alt="Pioneering the Future of Digital LED Innovation." 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] mx-auto md:mx-0">
                     </div>
 
                     <!-- 23 Years Emblem -->
-                    <div class="mt-1.5 sm:mt-4 md:mt-8 w-full max-w-[120px] xs:max-w-[145px] sm:max-w-[190px] md:max-w-[280px] lg:max-w-[340px] xl:max-w-[380px]">
+                    <div class="mt-2 sm:mt-3 md:mt-8 w-full max-w-[135px] xs:max-w-[155px] sm:max-w-[190px] md:max-w-[280px] lg:max-w-[340px] xl:max-w-[380px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" 
                              alt="Celebrating 23 Years - LED by Vision, Built by Trust" 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_18px_rgba(0,0,0,0.5)] mx-auto md:mx-0">
@@ -45,10 +63,10 @@
                 </div>
 
                 <!-- Right Section: Globie Mascot 3D Billboard (Enlarged & Responsive) -->
-                <div class="w-full md:w-[54%] lg:w-[56%] xl:w-[58%] flex-1 md:flex-none md:h-full flex items-end justify-center md:justify-center lg:justify-start lg:pl-4 xl:pl-8 pb-0 z-10 overflow-visible mt-1 sm:mt-3 md:mt-0">
+                <div class="w-full md:w-[54%] lg:w-[56%] xl:w-[58%] flex items-end justify-center md:justify-start pl-6 sm:pl-10 md:pl-12 lg:pl-16 xl:pl-20 pb-1 md:pb-0 z-10 overflow-visible mt-2 sm:mt-3 md:mt-0">
                     <img src="{{ asset('assets/images/carousel/slider1/Globie-Bacoor-GIF_07.25.25.gif') }}" 
                          alt="Globie 3D Anamorphic LED Billboard" 
-                         class="h-[270px] xs:h-[320px] sm:h-[390px] md:h-[95%] lg:h-[98%] max-h-[850px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform md:origin-bottom transition-transform duration-500">
+                         class="h-[310px] xs:h-[350px] sm:h-[400px] md:h-[95%] lg:h-[98%] max-h-[850px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform md:origin-bottom translate-x-3 sm:translate-x-6 md:translate-x-8 transition-transform duration-500">
                 </div>
 
             </div>
@@ -57,11 +75,11 @@
     </div>
 
     <!-- Navigation Arrows (Reverted to original premium glassmorphic style) -->
-    <button onclick="prevSlide()" class="absolute left-1.5 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Previous Slide">
+    <button onclick="prevSlide()" class="absolute left-2 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Previous Slide">
         <i class="fa-solid fa-chevron-left text-xs sm:text-base group-hover:-translate-x-0.5 transition-transform"></i>
     </button>
 
-    <button onclick="nextSlide()" class="absolute right-1.5 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Next Slide">
+    <button onclick="nextSlide()" class="absolute right-2 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Next Slide">
         <i class="fa-solid fa-chevron-right text-xs sm:text-base group-hover:translate-x-0.5 transition-transform"></i>
     </button>
 
