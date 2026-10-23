@@ -46,7 +46,7 @@
             <div class="relative h-full w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-14 flex flex-col md:flex-row items-center justify-center md:justify-between z-10 pt-4 sm:pt-6 md:pt-0 pb-10 sm:pb-12 md:pb-0 gap-2 xs:gap-3 sm:gap-4 md:gap-0">
                 
                 <!-- Left Section: Pioneer Text & 23 Years Emblem -->
-                <div class="w-full md:w-[46%] lg:w-[44%] xl:w-[42%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-4 lg:pl-10 xl:pl-16">
+                <div class="w-full md:w-[46%] lg:w-[44%] xl:w-[42%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-0 lg:pl-4 xl:pl-8">
                     <!-- Pioneer Text -->
                     <div class="w-full max-w-[270px] xs:max-w-[310px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[560px] xl:max-w-[620px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" 
@@ -66,7 +66,7 @@
                 <div class="w-full md:w-[54%] lg:w-[56%] xl:w-[58%] flex items-end justify-center md:justify-start pl-6 sm:pl-10 md:pl-12 lg:pl-16 xl:pl-20 pb-1 md:pb-0 z-10 overflow-visible mt-2 sm:mt-3 md:mt-0">
                     <img src="{{ asset('assets/images/carousel/slider1/Globie-Bacoor-GIF_07.25.25.gif') }}" 
                          alt="Globie 3D Anamorphic LED Billboard" 
-                         class="h-[310px] xs:h-[350px] sm:h-[400px] md:h-[95%] lg:h-[98%] max-h-[850px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform md:origin-bottom translate-x-3 sm:translate-x-6 md:translate-x-8 transition-transform duration-500">
+                         class="h-[300px] xs:h-[340px] sm:h-[390px] md:h-[88%] lg:h-[90%] xl:h-[92%] max-h-[820px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform md:origin-bottom translate-x-5 sm:translate-x-8 md:translate-x-14 lg:translate-x-20 xl:translate-x-24 translate-y-3 sm:translate-y-5 md:translate-y-7 lg:translate-y-9 transition-transform duration-500">
                 </div>
 
             </div>
