@@ -21,7 +21,7 @@
         @media (min-width: 768px) {
             #hero-carousel {
                 height: calc(100vh - 116px);
-                min-height: 480px;
+                min-height: 400px;
                 max-height: 920px;
             }
         }
@@ -45,17 +45,17 @@
             <!-- Content Container (Responsive for all phones up to ultrawide desktops) -->
             <div class="relative h-full w-full max-w-[1720px] mx-auto px-4 sm:px-8 md:pl-8 lg:pl-12 xl:pl-16 md:pr-4 lg:pr-6 xl:pr-8 flex flex-col md:flex-row items-center justify-center md:justify-between z-10 pt-4 sm:pt-6 md:pt-0 pb-10 sm:pb-12 md:pb-0 gap-2 xs:gap-3 sm:gap-4 md:gap-0">
                 
-                <!-- Left Section: Pioneer Text & 23 Years Emblem -->
-                <div class="w-full md:w-[45%] lg:w-[42%] xl:w-[40%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-0 lg:pl-2">
+                <!-- Left Section: Pioneer Text & 23 Years Emblem (Shifted further towards the center) -->
+                <div class="w-full md:w-[48%] lg:w-[46%] xl:w-[44%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-16 lg:pl-28 xl:pl-36">
                     <!-- Pioneer Text -->
-                    <div class="w-full max-w-[270px] xs:max-w-[310px] sm:max-w-[380px] md:max-w-[410px] lg:max-w-[480px] xl:max-w-[560px]">
+                    <div class="w-full max-w-[270px] xs:max-w-[310px] sm:max-w-[380px] md:max-w-[380px] lg:max-w-[450px] xl:max-w-[530px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" 
                              alt="Pioneering the Future of Digital LED Innovation." 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] mx-auto md:mx-0">
                     </div>
 
                     <!-- 23 Years Emblem -->
-                    <div class="mt-2 sm:mt-3 md:mt-3 lg:mt-4 w-full max-w-[135px] xs:max-w-[155px] sm:max-w-[185px] md:max-w-[180px] lg:max-w-[230px] xl:max-w-[280px]">
+                    <div class="mt-2 sm:mt-3 md:mt-2.5 lg:mt-3.5 w-full max-w-[135px] xs:max-w-[155px] sm:max-w-[185px] md:max-w-[160px] lg:max-w-[210px] xl:max-w-[260px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" 
                              alt="Celebrating 23 Years - LED by Vision, Built by Trust" 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_18px_rgba(0,0,0,0.5)] mx-auto md:mx-0">
