@@ -12,7 +12,7 @@
 
 @section('content')
 <!-- Full-Screen Interactive Hero Carousel -->
-<div id="hero-carousel" class="relative w-full h-[520px] sm:h-[580px] md:h-[620px] lg:h-[calc(100vh-116px)] lg:min-h-[580px] lg:max-h-[780px] overflow-hidden bg-[#07011f] select-none">
+<div id="hero-carousel" class="relative w-full overflow-hidden bg-[#07011f] select-none h-[calc(100svh-80px)] md:h-[calc(100vh-116px)] min-h-[580px] md:min-h-[700px]" style="height: calc(100vh - 116px); min-height: 620px;">
 
     <!-- Slides Wrapper -->
     <div class="relative w-full h-full">
@@ -24,31 +24,31 @@
                  style="background-image: url('{{ asset('assets/images/carousel/slider1/gbtx_slide1_bg.webp') }}');">
             </div>
 
-            <!-- Content Container matching reference screenshot layout -->
-            <div class="relative h-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-14 flex flex-col md:flex-row items-center justify-between z-10">
+            <!-- Content Container (Responsive for all phones up to ultrawide desktops) -->
+            <div class="relative h-full w-full max-w-[1600px] mx-auto px-3 sm:px-8 lg:px-14 flex flex-col md:flex-row items-center justify-between z-10 pt-3 sm:pt-6 md:pt-0 pb-10 sm:pb-14 md:pb-0">
                 
                 <!-- Left Section: Pioneer Text & 23 Years Emblem -->
-                <div class="w-full md:w-[48%] lg:w-[46%] flex flex-col justify-center items-start pt-8 sm:pt-12 md:pt-0 md:pl-4 lg:pl-10 xl:pl-16 z-10">
+                <div class="w-full md:w-[46%] lg:w-[44%] xl:w-[42%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-4 lg:pl-10 xl:pl-16">
                     <!-- Pioneer Text -->
-                    <div class="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[470px] lg:max-w-[530px]">
+                    <div class="w-full max-w-[230px] xs:max-w-[270px] sm:max-w-[360px] md:max-w-[480px] lg:max-w-[560px] xl:max-w-[620px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" 
                              alt="Pioneering the Future of Digital LED Innovation." 
-                             class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
+                             class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] mx-auto md:mx-0">
                     </div>
 
                     <!-- 23 Years Emblem -->
-                    <div class="mt-4 sm:mt-6 md:mt-8 w-full max-w-[200px] sm:max-w-[240px] md:max-w-[270px] lg:max-w-[310px]">
+                    <div class="mt-1.5 sm:mt-4 md:mt-8 w-full max-w-[120px] xs:max-w-[145px] sm:max-w-[190px] md:max-w-[280px] lg:max-w-[340px] xl:max-w-[380px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" 
                              alt="Celebrating 23 Years - LED by Vision, Built by Trust" 
-                             class="w-full h-auto object-contain drop-shadow-[0_4px_18px_rgba(0,0,0,0.5)]">
+                             class="w-full h-auto object-contain drop-shadow-[0_4px_18px_rgba(0,0,0,0.5)] mx-auto md:mx-0">
                     </div>
                 </div>
 
-                <!-- Right Section: Globie Mascot 3D Billboard -->
-                <div class="w-full md:w-[52%] lg:w-[54%] h-full flex items-end justify-center md:justify-center lg:justify-start lg:pl-6 xl:pl-10 pb-2 md:pb-0 z-10">
+                <!-- Right Section: Globie Mascot 3D Billboard (Enlarged & Responsive) -->
+                <div class="w-full md:w-[54%] lg:w-[56%] xl:w-[58%] flex-1 md:flex-none md:h-full flex items-end justify-center md:justify-center lg:justify-start lg:pl-4 xl:pl-8 pb-0 z-10 overflow-visible mt-1 sm:mt-3 md:mt-0">
                     <img src="{{ asset('assets/images/carousel/slider1/Globie-Bacoor-GIF_07.25.25.gif') }}" 
                          alt="Globie 3D Anamorphic LED Billboard" 
-                         class="h-[75%] sm:h-[82%] md:h-[88%] lg:h-[93%] max-h-[640px] w-auto object-contain drop-shadow-[0_15px_35px_rgba(0,0,0,0.7)]">
+                         class="h-[270px] xs:h-[320px] sm:h-[390px] md:h-[95%] lg:h-[98%] max-h-[850px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform md:origin-bottom transition-transform duration-500">
                 </div>
 
             </div>
@@ -56,21 +56,21 @@
 
     </div>
 
-    <!-- Navigation Arrows -->
-    <button onclick="prevSlide()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-all duration-300 z-30" title="Previous Slide">
-        <i class="fa-solid fa-chevron-left text-2xl sm:text-3xl drop-shadow-md"></i>
+    <!-- Navigation Arrows (Reverted to original premium glassmorphic style) -->
+    <button onclick="prevSlide()" class="absolute left-1.5 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Previous Slide">
+        <i class="fa-solid fa-chevron-left text-xs sm:text-base group-hover:-translate-x-0.5 transition-transform"></i>
     </button>
 
-    <button onclick="nextSlide()" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-all duration-300 z-30" title="Next Slide">
-        <i class="fa-solid fa-chevron-right text-2xl sm:text-3xl drop-shadow-md"></i>
+    <button onclick="nextSlide()" class="absolute right-1.5 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Next Slide">
+        <i class="fa-solid fa-chevron-right text-xs sm:text-base group-hover:translate-x-0.5 transition-transform"></i>
     </button>
 
-    <!-- Slide Indicators matching the screenshot style -->
-    <div class="absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 flex items-center space-x-2 z-30">
-        <button onclick="goToSlide(0)" class="carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white transition-all duration-300 shadow-sm" title="Slide 1"></button>
-        <button onclick="goToSlide(1)" class="carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full border border-white/70 bg-transparent hover:bg-white/40 transition-all duration-300" title="Slide 2"></button>
-        <button onclick="goToSlide(2)" class="carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full border border-white/70 bg-transparent hover:bg-white/40 transition-all duration-300" title="Slide 3"></button>
-        <button onclick="goToSlide(3)" class="carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full border border-white/70 bg-transparent hover:bg-white/40 transition-all duration-300" title="Slide 4"></button>
+    <!-- Slide Indicators & Progress Bar (Reverted to original pill style) -->
+    <div class="absolute bottom-2.5 sm:bottom-6 left-1/2 -translate-x-1/2 flex items-center space-x-2 sm:space-x-2.5 z-30 bg-black/60 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-md border border-white/15">
+        <button onclick="goToSlide(0)" class="carousel-dot w-6 sm:w-8 h-2 rounded-full bg-[#0047ba] transition-all duration-300 shadow-sm" title="Slide 1"></button>
+        <button onclick="goToSlide(1)" class="carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 2"></button>
+        <button onclick="goToSlide(2)" class="carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 3"></button>
+        <button onclick="goToSlide(3)" class="carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 4"></button>
     </div>
 </div>
 
@@ -915,9 +915,9 @@
 
         dots.forEach((dot, i) => {
             if (i === currentSlide) {
-                dot.className = 'carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white transition-all duration-300 shadow-sm';
+                dot.className = 'carousel-dot w-6 sm:w-8 h-2 rounded-full bg-[#0047ba] transition-all duration-300 shadow-sm';
             } else {
-                dot.className = 'carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full border border-white/70 bg-transparent hover:bg-white/40 transition-all duration-300';
+                dot.className = 'carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300';
             }
         });
     }
