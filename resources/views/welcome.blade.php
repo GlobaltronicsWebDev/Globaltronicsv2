@@ -21,7 +21,7 @@
         @media (min-width: 768px) {
             #hero-carousel {
                 height: calc(100vh - 116px);
-                min-height: 520px;
+                min-height: 480px;
                 max-height: 920px;
             }
         }
@@ -43,30 +43,30 @@
             </div>
 
             <!-- Content Container (Responsive for all phones up to ultrawide desktops) -->
-            <div class="relative h-full w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-14 flex flex-col md:flex-row items-center justify-center md:justify-between z-10 pt-4 sm:pt-6 md:pt-0 pb-10 sm:pb-12 md:pb-0 gap-2 xs:gap-3 sm:gap-4 md:gap-0">
+            <div class="relative h-full w-full max-w-[1720px] mx-auto px-4 sm:px-8 md:pl-8 lg:pl-12 xl:pl-16 md:pr-4 lg:pr-6 xl:pr-8 flex flex-col md:flex-row items-center justify-center md:justify-between z-10 pt-4 sm:pt-6 md:pt-0 pb-10 sm:pb-12 md:pb-0 gap-2 xs:gap-3 sm:gap-4 md:gap-0">
                 
                 <!-- Left Section: Pioneer Text & 23 Years Emblem -->
-                <div class="w-full md:w-[46%] lg:w-[44%] xl:w-[42%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-0 lg:pl-4 xl:pl-8">
+                <div class="w-full md:w-[45%] lg:w-[42%] xl:w-[40%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-0 lg:pl-2">
                     <!-- Pioneer Text -->
-                    <div class="w-full max-w-[270px] xs:max-w-[310px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[560px] xl:max-w-[620px]">
+                    <div class="w-full max-w-[270px] xs:max-w-[310px] sm:max-w-[380px] md:max-w-[460px] lg:max-w-[540px] xl:max-w-[600px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" 
                              alt="Pioneering the Future of Digital LED Innovation." 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] mx-auto md:mx-0">
                     </div>
 
                     <!-- 23 Years Emblem -->
-                    <div class="mt-2 sm:mt-3 md:mt-6 lg:mt-8 w-full max-w-[135px] xs:max-w-[155px] sm:max-w-[190px] md:max-w-[260px] lg:max-w-[320px] xl:max-w-[360px]">
+                    <div class="mt-2 sm:mt-3 md:mt-5 lg:mt-6 w-full max-w-[135px] xs:max-w-[155px] sm:max-w-[190px] md:max-w-[250px] lg:max-w-[300px] xl:max-w-[340px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" 
                              alt="Celebrating 23 Years - LED by Vision, Built by Trust" 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_18px_rgba(0,0,0,0.5)] mx-auto md:mx-0">
                     </div>
                 </div>
 
-                <!-- Right Section: Globie Mascot 3D Billboard (Positioned down and to the right) -->
-                <div class="w-full md:w-[54%] lg:w-[56%] xl:w-[58%] h-full flex items-end justify-center md:justify-end md:pr-6 lg:pr-12 xl:pr-16 pb-0 z-10 overflow-visible mt-2 sm:mt-3 md:mt-0">
+                <!-- Right Section: Globie Mascot 3D Billboard (Grounded at bottom, near arrow right, bigger on desktop) -->
+                <div class="w-full md:w-[55%] lg:w-[58%] xl:w-[60%] h-full flex items-end justify-center md:justify-end pb-0 z-10 overflow-visible mt-2 sm:mt-3 md:mt-0">
                     <img src="{{ asset('assets/images/carousel/slider1/Globie-Bacoor-GIF_07.25.25.gif') }}" 
                          alt="Globie 3D Anamorphic LED Billboard" 
-                         class="h-[280px] xs:h-[320px] sm:h-[360px] md:h-[84%] lg:h-[86%] xl:h-[88%] max-h-[760px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] translate-y-2 sm:translate-y-3 md:translate-y-5 lg:translate-y-6 transition-transform duration-500">
+                         class="h-[280px] xs:h-[320px] sm:h-[360px] md:h-[94%] lg:h-[98%] xl:h-[102%] max-h-[880px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform origin-bottom md:origin-bottom-right translate-x-0 md:translate-x-4 lg:translate-x-8 translate-y-1 sm:translate-y-2 md:translate-y-3 transition-transform duration-500">
                 </div>
 
             </div>
