@@ -21,7 +21,7 @@
         @media (min-width: 768px) {
             #hero-carousel {
                 height: calc(100vh - 116px);
-                min-height: 680px;
+                min-height: 520px;
                 max-height: 920px;
             }
         }
@@ -55,18 +55,18 @@
                     </div>
 
                     <!-- 23 Years Emblem -->
-                    <div class="mt-2 sm:mt-3 md:mt-8 w-full max-w-[135px] xs:max-w-[155px] sm:max-w-[190px] md:max-w-[280px] lg:max-w-[340px] xl:max-w-[380px]">
+                    <div class="mt-2 sm:mt-3 md:mt-6 lg:mt-8 w-full max-w-[135px] xs:max-w-[155px] sm:max-w-[190px] md:max-w-[260px] lg:max-w-[320px] xl:max-w-[360px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" 
                              alt="Celebrating 23 Years - LED by Vision, Built by Trust" 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_18px_rgba(0,0,0,0.5)] mx-auto md:mx-0">
                     </div>
                 </div>
 
-                <!-- Right Section: Globie Mascot 3D Billboard (Enlarged & Responsive) -->
-                <div class="w-full md:w-[54%] lg:w-[56%] xl:w-[58%] flex items-end justify-center md:justify-start pl-6 sm:pl-10 md:pl-12 lg:pl-16 xl:pl-20 pb-1 md:pb-0 z-10 overflow-visible mt-2 sm:mt-3 md:mt-0">
+                <!-- Right Section: Globie Mascot 3D Billboard (Positioned down and to the right) -->
+                <div class="w-full md:w-[54%] lg:w-[56%] xl:w-[58%] h-full flex items-end justify-center md:justify-end md:pr-6 lg:pr-12 xl:pr-16 pb-0 z-10 overflow-visible mt-2 sm:mt-3 md:mt-0">
                     <img src="{{ asset('assets/images/carousel/slider1/Globie-Bacoor-GIF_07.25.25.gif') }}" 
                          alt="Globie 3D Anamorphic LED Billboard" 
-                         class="h-[300px] xs:h-[340px] sm:h-[390px] md:h-[88%] lg:h-[90%] xl:h-[92%] max-h-[820px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform md:origin-bottom translate-x-5 sm:translate-x-8 md:translate-x-14 lg:translate-x-20 xl:translate-x-24 translate-y-3 sm:translate-y-5 md:translate-y-7 lg:translate-y-9 transition-transform duration-500">
+                         class="h-[280px] xs:h-[320px] sm:h-[360px] md:h-[84%] lg:h-[86%] xl:h-[88%] max-h-[760px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] translate-y-2 sm:translate-y-3 md:translate-y-5 lg:translate-y-6 transition-transform duration-500">
                 </div>
 
             </div>
