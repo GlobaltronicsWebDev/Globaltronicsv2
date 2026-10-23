@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Smooth modal transitions */
+.modal-backdrop {
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.modal-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-out;
+}
+
+/* Continuous Infinite Client Logo Marquee */
+@keyframes logoMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee-infinite {
+    display: flex;
+    width: max-content;
+    animation: logoMarquee 45s linear infinite;
+}
+
+.animate-marquee-infinite:hover {
+    animation-play-state: paused;
+}
