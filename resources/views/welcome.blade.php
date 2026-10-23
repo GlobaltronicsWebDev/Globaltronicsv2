@@ -48,14 +48,14 @@
                 <!-- Left Section: Pioneer Text & 23 Years Emblem -->
                 <div class="w-full md:w-[45%] lg:w-[42%] xl:w-[40%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-0 lg:pl-2">
                     <!-- Pioneer Text -->
-                    <div class="w-full max-w-[270px] xs:max-w-[310px] sm:max-w-[380px] md:max-w-[460px] lg:max-w-[540px] xl:max-w-[600px]">
+                    <div class="w-full max-w-[270px] xs:max-w-[310px] sm:max-w-[380px] md:max-w-[410px] lg:max-w-[480px] xl:max-w-[560px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" 
                              alt="Pioneering the Future of Digital LED Innovation." 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] mx-auto md:mx-0">
                     </div>
 
                     <!-- 23 Years Emblem -->
-                    <div class="mt-2 sm:mt-3 md:mt-5 lg:mt-6 w-full max-w-[135px] xs:max-w-[155px] sm:max-w-[190px] md:max-w-[250px] lg:max-w-[300px] xl:max-w-[340px]">
+                    <div class="mt-2 sm:mt-3 md:mt-3 lg:mt-4 w-full max-w-[135px] xs:max-w-[155px] sm:max-w-[185px] md:max-w-[180px] lg:max-w-[230px] xl:max-w-[280px]">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" 
                              alt="Celebrating 23 Years - LED by Vision, Built by Trust" 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_18px_rgba(0,0,0,0.5)] mx-auto md:mx-0">
@@ -63,10 +63,10 @@
                 </div>
 
                 <!-- Right Section: Globie Mascot 3D Billboard (Grounded at bottom, near arrow right, bigger on desktop) -->
-                <div class="w-full md:w-[55%] lg:w-[58%] xl:w-[60%] h-full flex items-end justify-center md:justify-end pb-0 z-10 overflow-visible mt-2 sm:mt-3 md:mt-0">
+                <div class="w-full md:w-[55%] lg:w-[58%] xl:w-[60%] h-full flex items-end justify-center md:justify-end md:pr-10 lg:pr-14 xl:pr-18 pb-0 z-10 overflow-visible mt-2 sm:mt-3 md:mt-0">
                     <img src="{{ asset('assets/images/carousel/slider1/Globie-Bacoor-GIF_07.25.25.gif') }}" 
                          alt="Globie 3D Anamorphic LED Billboard" 
-                         class="h-[280px] xs:h-[320px] sm:h-[360px] md:h-[94%] lg:h-[98%] xl:h-[102%] max-h-[880px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform origin-bottom md:origin-bottom-right translate-x-0 md:translate-x-4 lg:translate-x-8 translate-y-1 sm:translate-y-2 md:translate-y-3 transition-transform duration-500">
+                         class="h-[280px] xs:h-[320px] sm:h-[360px] md:h-[92%] lg:h-[95%] xl:h-[98%] max-h-[880px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform origin-bottom md:origin-bottom-right translate-y-1 sm:translate-y-2 md:translate-y-2 transition-transform duration-500">
                 </div>
 
             </div>
@@ -84,7 +84,7 @@
     </button>
 
     <!-- Slide Indicators & Progress Bar (Reverted to original pill style) -->
-    <div class="absolute bottom-2.5 sm:bottom-6 left-1/2 -translate-x-1/2 flex items-center space-x-2 sm:space-x-2.5 z-30 bg-black/60 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-md border border-white/15">
+    <div class="absolute bottom-2.5 sm:bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 flex items-center space-x-2 sm:space-x-2.5 z-30 bg-black/60 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-md border border-white/15">
         <button onclick="goToSlide(0)" class="carousel-dot w-6 sm:w-8 h-2 rounded-full bg-[#0047ba] transition-all duration-300 shadow-sm" title="Slide 1"></button>
         <button onclick="goToSlide(1)" class="carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 2"></button>
         <button onclick="goToSlide(2)" class="carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 3"></button>
