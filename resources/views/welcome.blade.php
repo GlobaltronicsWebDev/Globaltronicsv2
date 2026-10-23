@@ -4,245 +4,73 @@
 
 @push('head')
     <!-- Priority Preload for Above-the-fold Hero Slide 1 for Instant Smooth Opening -->
-    <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slide1.jpg') }}" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider1/gbtx_slide1_bg.webp') }}" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="{{ asset('assets/images/logos/global_logo.webp') }}" type="image/webp" fetchpriority="high">
 @endpush
 
 @section('content')
-<!-- Full-Screen Interactive Hero Carousel (100% Viewport Height) -->
-<div id="hero-carousel" class="relative w-full h-[calc(100vh-80px)] md:h-[calc(100vh-116px)] min-h-[600px] overflow-hidden bg-gradient-to-br from-slate-950 via-[#00173d] to-slate-900 select-none">
+<!-- Full-Screen Interactive Hero Carousel -->
+<div id="hero-carousel" class="relative w-full h-[520px] sm:h-[580px] md:h-[620px] lg:h-[calc(100vh-116px)] lg:min-h-[580px] lg:max-h-[780px] overflow-hidden bg-[#07011f] select-none">
 
     <!-- Slides Wrapper -->
     <div class="relative w-full h-full">
 
-        <!-- Slide 1: Outdoor 3D LED Billboards -->
+        <!-- Slide 1: Pioneering Digital LED Innovation -->
         <div class="carousel-slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-20" data-index="0">
             <!-- Background Image -->
-            <div class="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-7000 ease-out" 
-                 style="background-image: url('{{ asset('assets/images/carousel/slide1.jpg') }}');">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('{{ asset('assets/images/carousel/slider1/gbtx_slide1_bg.webp') }}');">
             </div>
-            <!-- Multi-layer Gradient Overlays -->
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/30"></div>
 
-            <!-- Slide Content -->
-            <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col justify-center text-white z-10">
-                <div class="max-w-2xl">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0047ba]/80 border border-blue-400/30 text-yellow-300 text-xs font-bold uppercase tracking-wider mb-5 backdrop-blur-md">
-                        <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
-                        <span>Flagship DOOH & LED Displays</span>
+            <!-- Content Container matching reference screenshot layout -->
+            <div class="relative h-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-14 flex flex-col md:flex-row items-center justify-between z-10">
+                
+                <!-- Left Section: Pioneer Text & 23 Years Emblem -->
+                <div class="w-full md:w-[48%] lg:w-[46%] flex flex-col justify-center items-start pt-8 sm:pt-12 md:pt-0 md:pl-4 lg:pl-10 xl:pl-16 z-10">
+                    <!-- Pioneer Text -->
+                    <div class="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[470px] lg:max-w-[530px]">
+                        <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" 
+                             alt="Pioneering the Future of Digital LED Innovation." 
+                             class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)]">
                     </div>
 
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight drop-shadow-lg">
-                        Iconic 3D & <br>
-                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-amber-200 to-white">
-                            Digital Out-Of-Home
-                        </span>
-                    </h1>
-
-                    <p class="text-base sm:text-lg text-slate-200 mb-8 font-normal leading-relaxed drop-shadow">
-                        Transforming urban skylines with high-impact outdoor LED billboards, anamorphic 3D digital experiences, and nationwide audience reach.
-                    </p>
-
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#solutions" class="px-8 py-3.5 bg-[#0047ba] hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl shadow-lg shadow-blue-900/40 hover:shadow-blue-600/50 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
-                            <span>Explore Solutions</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="#contact" onclick="if(typeof openQuoteModal === 'function'){ openQuoteModal('Outdoor LED Display Billboard'); return false; }" class="px-8 py-3.5 bg-black/50 hover:bg-black/80 text-white text-sm font-bold uppercase tracking-wider rounded-xl border border-white/20 hover:border-yellow-400 transition-all duration-300 backdrop-blur-md cursor-pointer">
-                            Contact Us
-                        </a>
+                    <!-- 23 Years Emblem -->
+                    <div class="mt-4 sm:mt-6 md:mt-8 w-full max-w-[200px] sm:max-w-[240px] md:max-w-[270px] lg:max-w-[310px]">
+                        <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" 
+                             alt="Celebrating 23 Years - LED by Vision, Built by Trust" 
+                             class="w-full h-auto object-contain drop-shadow-[0_4px_18px_rgba(0,0,0,0.5)]">
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Slide 2: Luxury Indoor Curved Video Walls -->
-        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-1000 ease-in-out z-10" data-index="1">
-            <!-- Background Image -->
-            <div class="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-7000 ease-out" 
-                 style="background-image: url('{{ asset('assets/images/carousel/slide2.jpg') }}');">
-            </div>
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/30"></div>
-
-            <!-- Slide Content -->
-            <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col justify-center text-white z-10">
-                <div class="max-w-2xl">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0047ba]/80 border border-blue-400/30 text-yellow-300 text-xs font-bold uppercase tracking-wider mb-5 backdrop-blur-md">
-                        <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
-                        <span>Architectural & Indoor LED</span>
-                    </div>
-
-                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight drop-shadow-lg">
-                        Seamless Curved <br>
-                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-amber-200 to-white">
-                            LED Video Walls
-                        </span>
-                    </h2>
-
-                    <p class="text-base sm:text-lg text-slate-200 mb-8 font-normal leading-relaxed drop-shadow">
-                        Immersive ultra-high-definition curved displays engineered for modern corporate headquarters, command centers, luxury retail, and broadcast studios.
-                    </p>
-
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#services" class="px-8 py-3.5 bg-[#0047ba] hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl shadow-lg shadow-blue-900/40 hover:shadow-blue-600/50 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
-                            <span>View LED Systems</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="#contact" onclick="if(typeof openQuoteModal === 'function'){ openQuoteModal('Indoor High-Resolution LED'); return false; }" class="px-8 py-3.5 bg-black/50 hover:bg-black/80 text-white text-sm font-bold uppercase tracking-wider rounded-xl border border-white/20 hover:border-yellow-400 transition-all duration-300 backdrop-blur-md cursor-pointer">
-                            Get A Quote
-                        </a>
-                    </div>
+                <!-- Right Section: Globie Mascot 3D Billboard -->
+                <div class="w-full md:w-[52%] lg:w-[54%] h-full flex items-end justify-center md:justify-center lg:justify-start lg:pl-6 xl:pl-10 pb-2 md:pb-0 z-10">
+                    <img src="{{ asset('assets/images/carousel/slider1/Globie-Bacoor-GIF_07.25.25.gif') }}" 
+                         alt="Globie 3D Anamorphic LED Billboard" 
+                         class="h-[75%] sm:h-[82%] md:h-[88%] lg:h-[93%] max-h-[640px] w-auto object-contain drop-shadow-[0_15px_35px_rgba(0,0,0,0.7)]">
                 </div>
-            </div>
-        </div>
 
-        <!-- Slide 3: Smart City Digital Displays -->
-        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-1000 ease-in-out z-10" data-index="2">
-            <!-- Background Image -->
-            <div class="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-7000 ease-out" 
-                 style="background-image: url('{{ asset('assets/images/carousel/slide3.jpg') }}');">
-            </div>
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/30"></div>
-
-            <!-- Slide Content -->
-            <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col justify-center text-white z-10">
-                <div class="max-w-2xl">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0047ba]/80 border border-blue-400/30 text-yellow-300 text-xs font-bold uppercase tracking-wider mb-5 backdrop-blur-md">
-                        <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
-                        <span>Smart City Infrastructure</span>
-                    </div>
-
-                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight drop-shadow-lg">
-                        Intelligent Signage & <br>
-                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-amber-200 to-white">
-                            Smart City Kiosks
-                        </span>
-                    </h2>
-
-                    <p class="text-base sm:text-lg text-slate-200 mb-8 font-normal leading-relaxed drop-shadow">
-                        Connecting communities through smart interactive public displays, transparent glass LED innovations, and dynamic cloud content distribution.
-                    </p>
-
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#digiparc" class="px-8 py-3.5 bg-[#0047ba] hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl shadow-lg shadow-blue-900/40 hover:shadow-blue-600/50 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
-                            <span>Discover DigiParc</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="#contact" onclick="if(typeof openQuoteModal === 'function'){ openQuoteModal('Digital iPosters & Portable Kiosks'); return false; }" class="px-8 py-3.5 bg-black/50 hover:bg-black/80 text-white text-sm font-bold uppercase tracking-wider rounded-xl border border-white/20 hover:border-yellow-400 transition-all duration-300 backdrop-blur-md cursor-pointer">
-                            Contact Us
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 4: Stadium & Arena Jumbotron LED Systems -->
-        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-1000 ease-in-out z-10" data-index="3">
-            <!-- Background Image -->
-            <div class="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-7000 ease-out" 
-                 style="background-image: url('{{ asset('assets/images/carousel/slide4.jpg') }}');">
-            </div>
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/30"></div>
-
-            <!-- Slide Content -->
-            <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col justify-center text-white z-10">
-                <div class="max-w-2xl">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0047ba]/80 border border-blue-400/30 text-yellow-300 text-xs font-bold uppercase tracking-wider mb-5 backdrop-blur-md">
-                        <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
-                        <span>Sports & Arena Displays</span>
-                    </div>
-
-                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight drop-shadow-lg">
-                        Stadium Jumbotrons & <br>
-                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-amber-200 to-white">
-                            Perimeter Ribbon LED
-                        </span>
-                    </h2>
-
-                    <p class="text-base sm:text-lg text-slate-200 mb-8 font-normal leading-relaxed drop-shadow">
-                        Electrifying stadium experiences with 360-degree center-hung scoreboard cubes, dynamic ribbon boards, and broadcast-grade refresh rates.
-                    </p>
-
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#services" class="px-8 py-3.5 bg-[#0047ba] hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl shadow-lg shadow-blue-900/40 hover:shadow-blue-600/50 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
-                            <span>Arena Solutions</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="#contact" onclick="if(typeof openQuoteModal === 'function'){ openQuoteModal('Outdoor LED Display Billboard'); return false; }" class="px-8 py-3.5 bg-black/50 hover:bg-black/80 text-white text-sm font-bold uppercase tracking-wider rounded-xl border border-white/20 hover:border-yellow-400 transition-all duration-300 backdrop-blur-md cursor-pointer">
-                            Talk To Sales
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 5: Transparent Glass LED Displays -->
-        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-1000 ease-in-out z-10" data-index="4">
-            <!-- Background Image -->
-            <div class="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-7000 ease-out" 
-                 style="background-image: url('{{ asset('assets/images/carousel/slide5.jpg') }}');">
-            </div>
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/30"></div>
-
-            <!-- Slide Content -->
-            <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col justify-center text-white z-10">
-                <div class="max-w-2xl">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#0047ba]/80 border border-blue-400/30 text-yellow-300 text-xs font-bold uppercase tracking-wider mb-5 backdrop-blur-md">
-                        <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
-                        <span>Transparent LED Technology</span>
-                    </div>
-
-                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight drop-shadow-lg">
-                        Transparent Glass & <br>
-                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-amber-200 to-white">
-                            Retail Facade Displays
-                        </span>
-                    </h2>
-
-                    <p class="text-base sm:text-lg text-slate-200 mb-8 font-normal leading-relaxed drop-shadow">
-                        High-transparency architectural glass displays allowing natural daylight while projecting vivid, high-brightness commercial digital media.
-                    </p>
-
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#solutions" class="px-8 py-3.5 bg-[#0047ba] hover:bg-blue-600 text-white text-sm font-bold uppercase tracking-wider rounded-xl shadow-lg shadow-blue-900/40 hover:shadow-blue-600/50 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
-                            <span>Retail Displays</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="#contact" class="px-8 py-3.5 bg-black/50 hover:bg-black/80 text-white text-sm font-bold uppercase tracking-wider rounded-xl border border-white/20 hover:border-yellow-400 transition-all duration-300 backdrop-blur-md">
-                            Inquire Now
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
 
     </div>
 
     <!-- Navigation Arrows -->
-    <button onclick="prevSlide()" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Previous Slide">
-        <i class="fa-solid fa-chevron-left text-base group-hover:-translate-x-0.5 transition-transform"></i>
+    <button onclick="prevSlide()" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-all duration-300 z-30" title="Previous Slide">
+        <i class="fa-solid fa-chevron-left text-2xl sm:text-3xl drop-shadow-md"></i>
     </button>
 
-    <button onclick="nextSlide()" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Next Slide">
-        <i class="fa-solid fa-chevron-right text-base group-hover:translate-x-0.5 transition-transform"></i>
+    <button onclick="nextSlide()" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-all duration-300 z-30" title="Next Slide">
+        <i class="fa-solid fa-chevron-right text-2xl sm:text-3xl drop-shadow-md"></i>
     </button>
 
-    <!-- Slide Indicators & Progress Bar -->
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center space-x-2.5 z-30 bg-black/60 px-4 py-2 rounded-full backdrop-blur-md border border-white/15">
-        <button onclick="goToSlide(0)" class="carousel-dot w-8 h-2 rounded-full bg-[#0047ba] transition-all duration-300" title="Slide 1"></button>
-        <button onclick="goToSlide(1)" class="carousel-dot w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 2"></button>
-        <button onclick="goToSlide(2)" class="carousel-dot w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 3"></button>
-        <button onclick="goToSlide(3)" class="carousel-dot w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 4"></button>
-        <button onclick="goToSlide(4)" class="carousel-dot w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 5"></button>
+    <!-- Slide Indicators matching the screenshot style -->
+    <div class="absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 flex items-center space-x-2 z-30">
+        <button onclick="goToSlide(0)" class="carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white transition-all duration-300 shadow-sm" title="Slide 1"></button>
+        <button onclick="goToSlide(1)" class="carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full border border-white/70 bg-transparent hover:bg-white/40 transition-all duration-300" title="Slide 2"></button>
+        <button onclick="goToSlide(2)" class="carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full border border-white/70 bg-transparent hover:bg-white/40 transition-all duration-300" title="Slide 3"></button>
+        <button onclick="goToSlide(3)" class="carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full border border-white/70 bg-transparent hover:bg-white/40 transition-all duration-300" title="Slide 4"></button>
     </div>
 </div>
 
@@ -1087,9 +915,9 @@
 
         dots.forEach((dot, i) => {
             if (i === currentSlide) {
-                dot.className = 'carousel-dot w-8 h-2 rounded-full bg-[#0047ba] transition-all duration-300 shadow-sm';
+                dot.className = 'carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white transition-all duration-300 shadow-sm';
             } else {
-                dot.className = 'carousel-dot w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300';
+                dot.className = 'carousel-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full border border-white/70 bg-transparent hover:bg-white/40 transition-all duration-300';
             }
         });
     }
@@ -1287,29 +1115,9 @@
         showNewsSlide(currentNewsIndex);
     });
 
-    // Intelligent Background Preloader for Remaining Carousel Slides
+    // Background Preloader (Ready for additional slides)
     function preloadRemainingSlides() {
-        const remainingImages = [
-            "{{ asset('assets/images/carousel/slide2.jpg') }}",
-            "{{ asset('assets/images/carousel/slide3.jpg') }}",
-            "{{ asset('assets/images/carousel/slide4.jpg') }}",
-            "{{ asset('assets/images/carousel/slide5.jpg') }}"
-        ];
-        
-        const preloadNext = (index) => {
-            if (index >= remainingImages.length) return;
-            const img = new Image();
-            img.src = remainingImages[index];
-            img.onload = img.onerror = () => {
-                setTimeout(() => preloadNext(index + 1), 200);
-            };
-        };
-
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(() => preloadNext(0), { timeout: 1500 });
-        } else {
-            setTimeout(() => preloadNext(0), 400);
-        }
+        // Reserved for future slider assets
     }
 
     // Initialize on page load
