@@ -10,12 +10,12 @@
     <link rel="preload" as="image" href="{{ asset('assets/images/logos/global_logo.webp') }}" type="image/webp" fetchpriority="high">
     <style>
         #hero-carousel {
-            height: 560px;
-            min-height: 520px;
+            height: 600px;
+            min-height: 560px;
         }
         @media (min-width: 480px) {
             #hero-carousel {
-                height: 620px;
+                height: 660px;
             }
         }
         @media (min-width: 768px) {
@@ -43,30 +43,30 @@
             </div>
 
             <!-- Content Container (Responsive for all phones up to ultrawide desktops) -->
-            <div class="relative h-full w-full max-w-[1720px] mx-auto px-4 sm:px-8 md:pl-8 lg:pl-12 xl:pl-16 md:pr-4 lg:pr-6 xl:pr-8 flex flex-col md:flex-row items-center justify-center md:justify-between z-10 pt-4 sm:pt-6 md:pt-0 pb-10 sm:pb-12 md:pb-0 gap-2 xs:gap-3 sm:gap-4 md:gap-0">
+            <div class="relative h-full w-full max-w-[1720px] mx-auto px-4 sm:px-8 md:pl-8 lg:pl-12 xl:pl-16 md:pr-4 lg:pr-6 xl:pr-8 flex flex-col md:flex-row items-center justify-between z-10 pt-6 sm:pt-8 md:pt-0 pb-0 gap-0">
                 
-                <!-- Left Section: Pioneer Text & 23 Years Emblem (Shifted further towards the center) -->
+                <!-- Left Section: Pioneer Text & 23 Years Emblem (Centered on mobile with gap spaces) -->
                 <div class="w-full md:w-[48%] lg:w-[46%] xl:w-[44%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-16 lg:pl-28 xl:pl-36">
                     <!-- Pioneer Text -->
-                    <div class="w-full max-w-[270px] xs:max-w-[310px] sm:max-w-[380px] md:max-w-[380px] lg:max-w-[450px] xl:max-w-[530px]">
+                    <div class="w-full max-w-[270px] xs:max-w-[310px] sm:max-w-[380px] md:max-w-[380px] lg:max-w-[450px] xl:max-w-[530px] flex justify-center md:justify-start">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" 
                              alt="Pioneering the Future of Digital LED Innovation." 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] mx-auto md:mx-0">
                     </div>
 
-                    <!-- 23 Years Emblem -->
-                    <div class="mt-2 sm:mt-3 md:mt-2.5 lg:mt-3.5 w-full max-w-[135px] xs:max-w-[155px] sm:max-w-[185px] md:max-w-[160px] lg:max-w-[210px] xl:max-w-[260px]">
+                    <!-- 23 Years Emblem (With generous gap space and centered on mobile) -->
+                    <div class="mt-4 xs:mt-5 sm:mt-6 md:mt-2.5 lg:mt-3.5 w-full max-w-[145px] xs:max-w-[165px] sm:max-w-[195px] md:max-w-[160px] lg:max-w-[210px] xl:max-w-[260px] flex justify-center md:justify-start">
                         <img src="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" 
                              alt="Celebrating 23 Years - LED by Vision, Built by Trust" 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_18px_rgba(0,0,0,0.5)] mx-auto md:mx-0">
                     </div>
                 </div>
 
-                <!-- Right Section: Globie Mascot 3D Billboard (Grounded at bottom, near arrow right, bigger on desktop) -->
-                <div class="w-full md:w-[55%] lg:w-[58%] xl:w-[60%] h-full flex items-end justify-center md:justify-end md:pr-10 lg:pr-14 xl:pr-18 pb-0 z-10 overflow-visible mt-2 sm:mt-3 md:mt-0">
+                <!-- Right Section: Globie Mascot 3D Billboard (Grounded at bottom of carousel, bigger on mobile & desktop) -->
+                <div class="w-full md:w-[55%] lg:w-[58%] xl:w-[60%] h-auto md:h-full flex items-end justify-center md:justify-end md:pr-10 lg:pr-14 xl:pr-18 pb-0 z-10 overflow-visible mt-auto md:mt-0">
                     <img src="{{ asset('assets/images/carousel/slider1/Globie-Bacoor-GIF_07.25.25.gif') }}" 
                          alt="Globie 3D Anamorphic LED Billboard" 
-                         class="h-[280px] xs:h-[320px] sm:h-[360px] md:h-[92%] lg:h-[95%] xl:h-[98%] max-h-[880px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform origin-bottom md:origin-bottom-right translate-y-1 sm:translate-y-2 md:translate-y-2 transition-transform duration-500">
+                         class="h-[320px] xs:h-[350px] sm:h-[390px] md:h-[92%] lg:h-[95%] xl:h-[98%] max-h-[880px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] md:scale-105 lg:scale-110 xl:scale-115 transform origin-bottom md:origin-bottom-right translate-y-0 md:translate-y-2 transition-transform duration-500">
                 </div>
 
             </div>
@@ -74,17 +74,17 @@
 
     </div>
 
-    <!-- Navigation Arrows (Reverted to original premium glassmorphic style) -->
-    <button onclick="prevSlide()" class="absolute left-2 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Previous Slide">
+    <!-- Navigation Arrows (Hidden on mobile, visible on desktop) -->
+    <button onclick="prevSlide()" class="hidden md:flex absolute left-2 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Previous Slide">
         <i class="fa-solid fa-chevron-left text-xs sm:text-base group-hover:-translate-x-0.5 transition-transform"></i>
     </button>
 
-    <button onclick="nextSlide()" class="absolute right-2 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Next Slide">
+    <button onclick="nextSlide()" class="hidden md:flex absolute right-2 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 items-center justify-center transition-all duration-300 backdrop-blur-md z-30 group shadow-lg" title="Next Slide">
         <i class="fa-solid fa-chevron-right text-xs sm:text-base group-hover:translate-x-0.5 transition-transform"></i>
     </button>
 
-    <!-- Slide Indicators & Progress Bar (Reverted to original pill style) -->
-    <div class="absolute bottom-2.5 sm:bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 flex items-center space-x-2 sm:space-x-2.5 z-30 bg-black/60 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-md border border-white/15">
+    <!-- Slide Indicators & Progress Bar (Hidden on mobile, visible on desktop) -->
+    <div class="hidden md:flex absolute bottom-2.5 sm:bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 items-center space-x-2 sm:space-x-2.5 z-30 bg-black/60 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-md border border-white/15">
         <button onclick="goToSlide(0)" class="carousel-dot w-6 sm:w-8 h-2 rounded-full bg-[#0047ba] transition-all duration-300 shadow-sm" title="Slide 1"></button>
         <button onclick="goToSlide(1)" class="carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 2"></button>
         <button onclick="goToSlide(2)" class="carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 3"></button>
