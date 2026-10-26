@@ -141,7 +141,7 @@
                                required 
                                value="password"
                                class="w-full pl-10 pr-10 py-3 bg-slate-950 border border-slate-700/80 rounded-xl text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0047ba] focus:border-transparent transition-all"
-                               placeholder="••••••••">
+                               placeholder="password">
                         <button type="button" 
                                 onclick="togglePasswordVisibility()" 
                                 class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-500 hover:text-slate-300 transition-colors"
