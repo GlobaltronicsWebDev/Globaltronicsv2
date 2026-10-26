@@ -1502,6 +1502,72 @@
         }, 700);
     }
 
+    // Full Width Mosaic Photogrid Carousel Logic
+    let currentMosaicIndex = 0;
+    let mosaicInterval = null;
+    const mosaicTitles = [
+        'Collection 1 of 3: Commercial DOOH & Flagship Malls',
+        'Collection 2 of 3: Iconic Landmarks & Mega LED Billboards',
+        'Collection 3 of 3: Corporate, Commercial Banking & Smart Retail'
+    ];
+
+    function showMosaicSlide(index) {
+        const track = document.getElementById('mosaic-track');
+        const slides = document.querySelectorAll('.mosaic-slide');
+        const dots = document.querySelectorAll('.mosaic-dot');
+        const label = document.getElementById('mosaic-slide-label');
+        if (!track || slides.length === 0) return;
+
+        if (index >= slides.length) {
+            currentMosaicIndex = 0;
+        } else if (index < 0) {
+            currentMosaicIndex = slides.length - 1;
+        } else {
+            currentMosaicIndex = index;
+        }
+
+        track.style.transform = `translateX(-${currentMosaicIndex * 100}%)`;
+
+        if (label && mosaicTitles[currentMosaicIndex]) {
+            label.textContent = mosaicTitles[currentMosaicIndex];
+        }
+
+        dots.forEach((dot, idx) => {
+            if (idx === currentMosaicIndex) {
+                dot.className = 'mosaic-dot w-7 sm:w-8 h-2 sm:h-2.5 rounded-full bg-[#0047ba] transition-all duration-300 shadow-sm';
+            } else {
+                dot.className = 'mosaic-dot w-2.5 sm:w-3 h-2 sm:h-2.5 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300 shadow-sm';
+            }
+        });
+    }
+
+    function nextMosaicSlide() {
+        showMosaicSlide(currentMosaicIndex + 1);
+        resetMosaicInterval();
+    }
+
+    function prevMosaicSlide() {
+        showMosaicSlide(currentMosaicIndex - 1);
+        resetMosaicInterval();
+    }
+
+    function goToMosaicSlide(index) {
+        showMosaicSlide(index);
+        resetMosaicInterval();
+    }
+
+    function startMosaicInterval() {
+        clearInterval(mosaicInterval);
+        mosaicInterval = setInterval(() => {
+            showMosaicSlide(currentMosaicIndex + 1);
+        }, 7000);
+    }
+
+    function resetMosaicInterval() {
+        clearInterval(mosaicInterval);
+        startMosaicInterval();
+    }
+
     // Hero Carousel: Pause on hover, Keyboard navigation & Touch Swipe for mobile
     const carouselContainer = document.getElementById('hero-carousel');
     if (carouselContainer) {
@@ -1520,6 +1586,27 @@
                 nextSlide();
             } else if (heroTouchEndX > heroTouchStartX + 45) {
                 prevSlide();
+            }
+        }, { passive: true });
+    }
+
+    // Mosaic Carousel: Pause on hover & Touch Swipe for mobile
+    const mosaicContainer = document.getElementById('mosaic-carousel-container');
+    if (mosaicContainer) {
+        mosaicContainer.addEventListener('mouseenter', () => clearInterval(mosaicInterval));
+        mosaicContainer.addEventListener('mouseleave', startMosaicInterval);
+
+        let mosaicTouchStartX = 0;
+        let mosaicTouchEndX = 0;
+        mosaicContainer.addEventListener('touchstart', (e) => {
+            mosaicTouchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        mosaicContainer.addEventListener('touchend', (e) => {
+            mosaicTouchEndX = e.changedTouches[0].screenX;
+            if (mosaicTouchEndX < mosaicTouchStartX - 45) {
+                nextMosaicSlide();
+            } else if (mosaicTouchEndX > mosaicTouchStartX + 45) {
+                prevMosaicSlide();
             }
         }, { passive: true });
     }
@@ -1554,6 +1641,8 @@
         startTestimonialInterval();
         showNewsSlide(0);
         startNewsInterval();
+        showMosaicSlide(0);
+        startMosaicInterval();
         preloadRemainingSlides();
     });
 </script>
