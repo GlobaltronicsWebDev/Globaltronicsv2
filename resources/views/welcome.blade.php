@@ -894,30 +894,6 @@
             </div>
 
         </div>
-
-        <!-- Navigation Arrows (Left & Right) -->
-        <button onclick="prevMosaicSlide()" 
-                class="absolute left-3 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-black/65 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 shadow-2xl hover:scale-110 active:scale-95 group focus:outline-none" 
-                title="Previous Project Slide">
-            <i class="fa-solid fa-chevron-left text-sm sm:text-lg group-hover:-translate-x-0.5 transition-transform"></i>
-        </button>
-
-        <button onclick="nextMosaicSlide()" 
-                class="absolute right-3 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-black/65 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 shadow-2xl hover:scale-110 active:scale-95 group focus:outline-none" 
-                title="Next Project Slide">
-            <i class="fa-solid fa-chevron-right text-sm sm:text-lg group-hover:translate-x-0.5 transition-transform"></i>
-        </button>
-
-        <!-- Slide Indicators & Theme Label (Floating Pill at Bottom Center) -->
-        <div class="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center space-x-3 bg-black/75 backdrop-blur-md px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-white/20 shadow-2xl">
-            <span id="mosaic-slide-label" class="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider pr-3 border-r border-white/20 hidden md:inline-block">
-                Collection 1 of 3: Commercial DOOH & Malls
-            </span>
-            <button onclick="goToMosaicSlide(0)" class="mosaic-dot w-7 sm:w-8 h-2 sm:h-2.5 rounded-full bg-[#0047ba] transition-all duration-300 shadow-sm" title="Collection 1"></button>
-            <button onclick="goToMosaicSlide(1)" class="mosaic-dot w-2.5 sm:w-3 h-2 sm:h-2.5 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300 shadow-sm" title="Collection 2"></button>
-            <button onclick="goToMosaicSlide(2)" class="mosaic-dot w-2.5 sm:w-3 h-2 sm:h-2.5 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300 shadow-sm" title="Collection 3"></button>
-        </div>
-
     </div>
 </section>
 
@@ -1502,20 +1478,13 @@
         }, 700);
     }
 
-    // Full Width Mosaic Photogrid Carousel Logic
+    // Full Width Mosaic Photogrid Carousel Logic (Automatic 6-second rotation)
     let currentMosaicIndex = 0;
     let mosaicInterval = null;
-    const mosaicTitles = [
-        'Collection 1 of 3: Commercial DOOH & Flagship Malls',
-        'Collection 2 of 3: Iconic Landmarks & Mega LED Billboards',
-        'Collection 3 of 3: Corporate, Commercial Banking & Smart Retail'
-    ];
 
     function showMosaicSlide(index) {
         const track = document.getElementById('mosaic-track');
         const slides = document.querySelectorAll('.mosaic-slide');
-        const dots = document.querySelectorAll('.mosaic-dot');
-        const label = document.getElementById('mosaic-slide-label');
         if (!track || slides.length === 0) return;
 
         if (index >= slides.length) {
@@ -1527,40 +1496,21 @@
         }
 
         track.style.transform = `translateX(-${currentMosaicIndex * 100}%)`;
-
-        if (label && mosaicTitles[currentMosaicIndex]) {
-            label.textContent = mosaicTitles[currentMosaicIndex];
-        }
-
-        dots.forEach((dot, idx) => {
-            if (idx === currentMosaicIndex) {
-                dot.className = 'mosaic-dot w-7 sm:w-8 h-2 sm:h-2.5 rounded-full bg-[#0047ba] transition-all duration-300 shadow-sm';
-            } else {
-                dot.className = 'mosaic-dot w-2.5 sm:w-3 h-2 sm:h-2.5 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300 shadow-sm';
-            }
-        });
     }
 
     function nextMosaicSlide() {
         showMosaicSlide(currentMosaicIndex + 1);
-        resetMosaicInterval();
     }
 
     function prevMosaicSlide() {
         showMosaicSlide(currentMosaicIndex - 1);
-        resetMosaicInterval();
-    }
-
-    function goToMosaicSlide(index) {
-        showMosaicSlide(index);
-        resetMosaicInterval();
     }
 
     function startMosaicInterval() {
         clearInterval(mosaicInterval);
         mosaicInterval = setInterval(() => {
             showMosaicSlide(currentMosaicIndex + 1);
-        }, 7000);
+        }, 6000);
     }
 
     function resetMosaicInterval() {
