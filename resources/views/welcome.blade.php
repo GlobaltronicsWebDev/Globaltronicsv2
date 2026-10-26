@@ -156,8 +156,8 @@
             <div class="relative h-full w-full max-w-7xl xl:max-w-[1560px] mx-auto px-6 sm:px-10 lg:px-14 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-12 xl:gap-16 z-10 py-6 md:py-0">
                 
                 <!-- Left Section: Philips Signage Solutions Artwork & Copy -->
-                <div class="w-full md:w-[48%] lg:w-[46%] xl:w-[44%] flex flex-col justify-center items-start text-left z-10 shrink-0">
-                    <div class="w-full max-w-[280px] sm:max-w-[340px] md:max-w-[360px] lg:max-w-[440px] xl:max-w-[480px]">
+                <div class="w-full md:w-[48%] lg:w-[46%] xl:w-[45%] flex flex-col justify-center items-start text-left z-10 shrink-0">
+                    <div class="w-full max-w-[340px] sm:max-w-[440px] md:max-w-[480px] lg:max-w-[560px] xl:max-w-[640px]">
                         <img src="{{ asset('assets/images/carousel/slider3/Philips-and-commercial-display.png') }}" 
                              alt="Philips Signage Solutions - Commercial Display Screens" 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
