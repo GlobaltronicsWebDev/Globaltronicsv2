@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'GLOBALTRONICS INC | LED by Vision, Built by Trust')
+@section('title', 'GLOBALTRONICS INC | Home')
 
 @push('head')
     <!-- Priority Preload for Above-the-fold Hero Slide 1 for Instant Smooth Opening -->
@@ -156,24 +156,24 @@
             <div class="relative h-full w-full max-w-7xl xl:max-w-[1560px] mx-auto px-6 sm:px-10 lg:px-14 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-12 xl:gap-16 z-10 py-6 md:py-0">
                 
                 <!-- Left Section: Philips Signage Solutions Artwork & Copy -->
-                <div class="w-full md:w-[48%] lg:w-[46%] xl:w-[45%] flex flex-col justify-center items-start text-left z-10 shrink-0">
-                    <div class="w-full max-w-[340px] sm:max-w-[440px] md:max-w-[480px] lg:max-w-[560px] xl:max-w-[640px]">
+                <div class="w-full md:w-[48%] lg:w-[48%] xl:w-[46%] flex flex-col justify-center items-start text-left z-10 shrink-0">
+                    <div class="w-full max-w-[420px] sm:max-w-[540px] md:max-w-[620px] lg:max-w-[720px] xl:max-w-[820px]">
                         <img src="{{ asset('assets/images/carousel/slider3/Philips-and-commercial-display.png') }}" 
                              alt="Philips Signage Solutions - Commercial Display Screens" 
                              class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
                     </div>
 
-                    <p class="mt-4 sm:mt-5 text-white/95 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg font-normal leading-relaxed text-left drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] max-w-xl">
+                    <p class="mt-4 sm:mt-5 text-white/95 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg font-normal leading-relaxed text-left drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] max-w-xl lg:max-w-2xl">
                         Globaltronics' partnership with Philips has strengthened the former's leadership in the digital display field.<br class="hidden lg:inline"> Together, Globaltronics and Philips can provide products and services that cater to just every digital display need.
                     </p>
                 </div>
 
                 <!-- Right Section: Philips Screen Animated Display -->
-                <div class="w-full md:w-[52%] lg:w-[54%] xl:w-[56%] flex items-center justify-center z-10 py-2 md:py-0">
+                <div class="w-full md:w-[52%] lg:w-[52%] xl:w-[54%] flex items-center justify-center z-10 py-2 md:py-0">
                     <div class="relative w-full flex items-center justify-center">
                         <img src="{{ asset('assets/images/carousel/slider3/Philips-screen-GIF_10.23.25.gif') }}" 
                              alt="Philips Commercial Display Screen" 
-                             class="h-[280px] sm:h-[340px] md:h-[400px] lg:h-[500px] xl:h-[600px] max-h-[75vh] w-auto max-w-full object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.95)] hover:scale-[1.02] transition-transform duration-500">
+                             class="h-[300px] sm:h-[360px] md:h-[430px] lg:h-[530px] xl:h-[630px] max-h-[80vh] w-auto max-w-full object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.95)] hover:scale-[1.02] transition-transform duration-500">
                     </div>
                 </div>
 
@@ -689,7 +689,7 @@
 </section>
 
 <!-- Interactive LED Pixel Pitch & Distance Calculator Component -->
-@include('components.led-calculator')
+<!-- @include('components.led-calculator') -->
 
 <!-- Our Clients / Testimonials Section (Clean Borderless) -->
 <section id="testimonials" class="py-20 lg:py-28 bg-white text-slate-800 relative z-10">
