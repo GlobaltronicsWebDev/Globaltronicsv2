@@ -115,7 +115,7 @@
                         <input id="email" 
                                name="email" 
                                type="email" 
-                               autocomplete="email" 
+                    
                                required 
                                value="{{ old('email', 'mark.estoesta@globaltronics.net') }}" 
                                class="w-full pl-10 pr-4 py-3 bg-slate-950 border border-slate-700/80 rounded-xl text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0047ba] focus:border-transparent transition-all"
@@ -137,7 +137,7 @@
                         <input id="password" 
                                name="password" 
                                type="password" 
-                               autocomplete="current-password" 
+                          
                                required 
                                value="password"
                                class="w-full pl-10 pr-10 py-3 bg-slate-950 border border-slate-700/80 rounded-xl text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0047ba] focus:border-transparent transition-all"
