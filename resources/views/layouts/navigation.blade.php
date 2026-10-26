@@ -21,15 +21,15 @@
                <i class="fa-brands fa-facebook text-[18px]"></i>
             </a>
             <!-- Instagram -->
-            <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#E4405F] hover:bg-[#0047ba] hover:text-white active:bg-[#0047ba] active:text-white focus:bg-[#0047ba] focus:text-white hover:scale-105 active:scale-90 transition-all duration-300 shadow-sm" title="Instagram">
+            <a href="https://www.instagram.com/globaltronicsph/?hl=en" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#E4405F] hover:bg-[#0047ba] hover:text-white active:bg-[#0047ba] active:text-white focus:bg-[#0047ba] focus:text-white hover:scale-105 active:scale-90 transition-all duration-300 shadow-sm" title="Instagram">
                 <i class="fa-brands fa-instagram text-[18px]"></i>
             </a>
             <!-- YouTube -->
-            <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#FF0000] hover:bg-[#0047ba] hover:text-white active:bg-[#0047ba] active:text-white focus:bg-[#0047ba] focus:text-white hover:scale-105 active:scale-90 transition-all duration-300 shadow-sm" title="YouTube">
+            <a href="https://www.youtube.com/@GlobaltronicsPH" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#FF0000] hover:bg-[#0047ba] hover:text-white active:bg-[#0047ba] active:text-white focus:bg-[#0047ba] focus:text-white hover:scale-105 active:scale-90 transition-all duration-300 shadow-sm" title="YouTube">
                 <i class="fa-brands fa-youtube text-[18px]"></i>
             </a>
             <!-- LinkedIn -->
-            <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0A66C2] hover:bg-[#0047ba] hover:text-white active:bg-[#0047ba] active:text-white focus:bg-[#0047ba] focus:text-white hover:scale-105 active:scale-90 transition-all duration-300 shadow-sm" title="LinkedIn">
+            <a href="https://www.linkedin.com/company/globaltronicsphl" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0A66C2] hover:bg-[#0047ba] hover:text-white active:bg-[#0047ba] active:text-white focus:bg-[#0047ba] focus:text-white hover:scale-105 active:scale-90 transition-all duration-300 shadow-sm" title="LinkedIn">
                 <i class="fa-brands fa-linkedin text-[18px]"></i>
             </a>
         </div>
