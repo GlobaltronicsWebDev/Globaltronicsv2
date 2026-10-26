@@ -8,9 +8,10 @@
     <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider1/GBTX-slider_PIONEER-TEXT.webp') }}" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider1/GBTX-slider_23-years.webp') }}" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="{{ asset('assets/images/logos/global_logo.webp') }}" type="image/webp" fetchpriority="high">
-    <!-- Slide 2 assets -->
+    <!-- Carousel assets -->
     <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider2/gbtx_slide2_bg.jpg') }}" fetchpriority="low">
-    <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider2/DIGITAL-DISPLAY-SOLUTIONS-PNG-1-1.webp') }}" type="image/webp" fetchpriority="low">
+    <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider3/GBTX-slider-Philips_BG.jpg') }}" fetchpriority="low">
+    <link rel="preload" as="image" href="{{ asset('assets/images/carousel/slider4/Lease-to-Own-Slider-01-BG.png') }}" fetchpriority="low">
     <style>
         #hero-carousel {
             height: 620px;
@@ -141,6 +142,78 @@
             </div>
         </div>
 
+        <!-- Slide 3: Philips Commercial Display Screens -->
+        <div class="carousel-slide absolute inset-0 w-full h-full bg-[#07011f] opacity-0 pointer-events-none transition-opacity duration-1000 ease-in-out z-10" data-index="2">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('{{ asset('assets/images/carousel/slider3/GBTX-slider-Philips_BG.jpg') }}');">
+            </div>
+            
+            <!-- Soft gradient vignette overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#001030]/90 via-[#002050]/50 to-[#001030]/60"></div>
+
+            <!-- Content Container -->
+            <div class="relative h-full w-full max-w-7xl xl:max-w-[1560px] mx-auto px-6 sm:px-10 lg:px-14 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-12 xl:gap-16 z-10 py-6 md:py-0">
+                
+                <!-- Left Section: Philips Signage Solutions Artwork & Copy -->
+                <div class="w-full md:w-[48%] lg:w-[46%] xl:w-[44%] flex flex-col justify-center items-start text-left z-10 shrink-0">
+                    <div class="w-full max-w-[280px] sm:max-w-[340px] md:max-w-[360px] lg:max-w-[440px] xl:max-w-[480px]">
+                        <img src="{{ asset('assets/images/carousel/slider3/Philips-and-commercial-display.png') }}" 
+                             alt="Philips Signage Solutions - Commercial Display Screens" 
+                             class="w-full h-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+                    </div>
+
+                    <p class="mt-4 sm:mt-5 text-white/95 text-sm sm:text-base md:text-sm lg:text-base xl:text-lg font-normal leading-relaxed text-left drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] max-w-xl">
+                        Globaltronics' partnership with Philips has strengthened the former's leadership in the digital display field.<br class="hidden lg:inline"> Together, Globaltronics and Philips can provide products and services that cater to just every digital display need.
+                    </p>
+                </div>
+
+                <!-- Right Section: Philips Screen Animated Display -->
+                <div class="w-full md:w-[52%] lg:w-[54%] xl:w-[56%] flex items-center justify-center z-10 py-2 md:py-0">
+                    <div class="relative w-full flex items-center justify-center">
+                        <img src="{{ asset('assets/images/carousel/slider3/Philips-screen-GIF_10.23.25.gif') }}" 
+                             alt="Philips Commercial Display Screen" 
+                             class="h-[280px] sm:h-[340px] md:h-[400px] lg:h-[500px] xl:h-[600px] max-h-[75vh] w-auto max-w-full object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.95)] hover:scale-[1.02] transition-transform duration-500">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Slide 4: Lease Now, Own It Fast! -->
+        <div class="carousel-slide absolute inset-0 w-full h-full bg-[#07011f] opacity-0 pointer-events-none transition-opacity duration-1000 ease-in-out z-10" data-index="3">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('{{ asset('assets/images/carousel/slider4/Lease-to-Own-Slider-01-BG.png') }}');">
+            </div>
+            
+            <!-- Soft gradient vignette overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-[#001030]/85 via-transparent to-[#001030]/60"></div>
+
+            <!-- Content Container -->
+            <div class="relative h-full w-full max-w-7xl xl:max-w-[1560px] mx-auto px-6 sm:px-10 lg:px-14 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-12 xl:gap-16 z-10 py-6 md:py-0">
+                
+                <!-- Left Section: Lease to Own Artwork -->
+                <div class="w-full md:w-[48%] lg:w-[46%] xl:w-[44%] flex flex-col justify-center items-start text-left z-10 shrink-0">
+                    <div class="w-full max-w-[320px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[540px] xl:max-w-[620px]">
+                        <img src="{{ asset('assets/images/carousel/slider4/Lease-to-Own-Slider-02-scaled.webp') }}" 
+                             alt="Lease Now, Own It Fast! Flexible payment schemes for top-quality LED display solutions" 
+                             class="w-full h-auto object-contain drop-shadow-[0_4px_18px_rgba(0,0,0,0.85)]">
+                    </div>
+                </div>
+
+                <!-- Right Section: Digital Display Kiosks Artwork with Hotline -->
+                <div class="w-full md:w-[52%] lg:w-[54%] xl:w-[56%] flex items-center justify-center z-10 py-2 md:py-0">
+                    <div class="relative w-full flex items-center justify-center">
+                        <img src="{{ asset('assets/images/carousel/slider4/Lease-to-Own-Slider-04.webp') }}" 
+                             alt="Digital Display Kiosks - 0917 7013 272" 
+                             class="h-[300px] sm:h-[360px] md:h-[430px] lg:h-[530px] xl:h-[630px] max-h-[80vh] w-auto max-w-full object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.95)] hover:scale-[1.02] transition-transform duration-500">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
     <!-- Navigation Arrows (Hidden on mobile, visible on desktop) -->
@@ -152,10 +225,12 @@
         <i class="fa-solid fa-chevron-right text-xs sm:text-base group-hover:translate-x-0.5 transition-transform"></i>
     </button>
 
-    <!-- Slide Indicators & Progress Bar (Hidden on mobile, visible on desktop) -->
-    <div class="carousel-indicators-pill absolute bottom-2.5 sm:bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 items-center space-x-2 sm:space-x-2.5 z-30 bg-black/60 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-md border border-white/15">
+    <!-- Slide Indicators & Progress Bar (Hidden on mobile, visible on desktop, lifted higher with comfortable padding) -->
+    <div class="carousel-indicators-pill absolute bottom-6 sm:bottom-7 md:bottom-8 left-1/2 -translate-x-1/2 items-center space-x-2 sm:space-x-2.5 z-30 bg-black/60 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full backdrop-blur-md border border-white/15 shadow-xl">
         <button onclick="goToSlide(0)" class="carousel-dot w-6 sm:w-8 h-2 rounded-full bg-[#0047ba] transition-all duration-300 shadow-sm" title="Slide 1"></button>
         <button onclick="goToSlide(1)" class="carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 2"></button>
+        <button onclick="goToSlide(2)" class="carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 3"></button>
+        <button onclick="goToSlide(3)" class="carousel-dot w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300" title="Slide 4"></button>
     </div>
 </div>
 
