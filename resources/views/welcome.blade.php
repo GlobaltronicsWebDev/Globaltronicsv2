@@ -1194,12 +1194,34 @@
         }, 700);
     }
 
-    // Pause on hover
+    // Hero Carousel: Pause on hover, Keyboard navigation & Touch Swipe for mobile
     const carouselContainer = document.getElementById('hero-carousel');
     if (carouselContainer) {
         carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
         carouselContainer.addEventListener('mouseleave', startAutoSlide);
+
+        // Touch Swipe
+        let heroTouchStartX = 0;
+        let heroTouchEndX = 0;
+        carouselContainer.addEventListener('touchstart', (e) => {
+            heroTouchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        carouselContainer.addEventListener('touchend', (e) => {
+            heroTouchEndX = e.changedTouches[0].screenX;
+            if (heroTouchEndX < heroTouchStartX - 45) {
+                nextSlide();
+            } else if (heroTouchEndX > heroTouchStartX + 45) {
+                prevSlide();
+            }
+        }, { passive: true });
     }
+
+    // Keyboard Arrow navigation for hero carousel
+    document.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
 
     const newsContainer = document.getElementById('news-carousel-container');
     if (newsContainer) {
