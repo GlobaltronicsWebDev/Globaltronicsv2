@@ -688,8 +688,7 @@
     </div>
 </section>
 
-<!-- Interactive LED Pixel Pitch & Distance Calculator Component -->
-<!-- @include('components.led-calculator') -->
+
 
 <!-- Our Clients / Testimonials Section (Clean Borderless) -->
 <section id="testimonials" class="py-20 lg:py-28 bg-white text-slate-800 relative z-10">
