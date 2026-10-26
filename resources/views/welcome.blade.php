@@ -1510,7 +1510,7 @@
         clearInterval(mosaicInterval);
         mosaicInterval = setInterval(() => {
             showMosaicSlide(currentMosaicIndex + 1);
-        }, 6000);
+        }, 4000);
     }
 
     function resetMosaicInterval() {
