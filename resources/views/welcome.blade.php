@@ -575,116 +575,349 @@
         </div>
     </div>
 
-    <!-- Full Width Edge-to-Edge Mosaic Photo Grid (Large Scale, Zero Gap) -->
-    <div class="w-full bg-black leading-none m-0 p-0 block">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-black">
+    <!-- Full Width Edge-to-Edge Mosaic Photo Grid Carousel (3 Themed Slides) -->
+    <div id="mosaic-carousel-container" class="relative w-full overflow-hidden bg-black select-none group/carousel leading-none m-0 p-0 block">
+        
+        <!-- Sliding Track Container -->
+        <div id="mosaic-track" class="flex transition-transform duration-700 ease-in-out w-full m-0 p-0">
             
-            <!-- Column 1: Left (Tall Corner LED + Mobile LED Truck) -->
-            <div class="flex flex-col">
-                <!-- Tall Mall Corner 3D LED Screen -->
-                <div class="group relative overflow-hidden bg-slate-900 h-[500px] sm:h-[600px] lg:h-[680px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst1.webp') }}" 
-                         alt="Indoor Corner LED Installation" 
-                         loading="lazy"
-                         decoding="async"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <span class="text-white text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md">In-Mall 3D LED Display</span>
-                    </div>
-                </div>
+            <!-- Slide 1: Commercial DOOH & Flagship Malls -->
+            <div class="mosaic-slide w-full shrink-0 m-0 p-0 block">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-black">
+                    
+                    <!-- Column 1: Left (Tall Mall Corner 3D LED + Mobile LED Truck) -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[500px] sm:h-[600px] lg:h-[680px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/inst1.webp') }}" 
+                                 alt="In-Mall 3D LED Display" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">In-Mall 3D LED Display</span>
+                            </div>
+                        </div>
 
-                <!-- Mobile LED Billboard Truck -->
-                <div class="group relative overflow-hidden bg-slate-900 h-[300px] sm:h-[360px] lg:h-[400px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst2.webp') }}" 
-                         alt="Mobile LED Truck Billboard" 
-                         loading="lazy"
-                         decoding="async"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <span class="text-white text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md">Mobile LED Advertising Truck</span>
+                        <div class="group relative overflow-hidden bg-slate-900 h-[300px] sm:h-[360px] lg:h-[400px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/inst2.webp') }}" 
+                                 alt="Mobile LED Advertising Truck" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Mobile LED Advertising Truck</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Column 2: Center (Pharmacy Displays + Retail Displays + Highway Billboard) -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/inst3.webp') }}" 
+                                 alt="Retail Pharmacy Digital Displays" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Retail Pharmacy Digital Displays</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/inst4.webp') }}" 
+                                 alt="Commercial Mall Digital Totems" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Commercial Mall Digital Totems</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/inst5.webp') }}" 
+                                 alt="Outdoor Highway LED Billboard" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Outdoor Highway LED Billboard</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Right (Curved 3D Anamorphic LED + Transit Info + QSR Menu) -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[280px] sm:h-[340px] lg:h-[380px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/inst6.webp') }}" 
+                                 alt="Curved 3D Anamorphic LED" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Curved 3D Anamorphic LED</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/inst7.webp') }}" 
+                                 alt="Transit Information LED Systems" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Transit Information LED Systems</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/inst8.webp') }}" 
+                                 alt="Commercial QSR Digital Menu Boards" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Commercial QSR Digital Menu Boards</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Column 2: Center (Pharmacy Displays + Retail Displays + Building Facade) -->
-            <div class="flex flex-col">
-                <!-- Pharmacy Counter Displays -->
-                <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst3.webp') }}" 
-                         alt="Pharmacy Health Store Digital Signage" 
-                         loading="lazy"
-                         decoding="async"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <span class="text-white text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md">Retail Pharmacy Digital Displays</span>
-                    </div>
-                </div>
+            <!-- Slide 2: Iconic Landmarks & Mega LED Billboards -->
+            <div class="mosaic-slide w-full shrink-0 m-0 p-0 block">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-black">
+                    
+                    <!-- Column 1: Left (Glorietta 3D LED + BGC Arts Center Curved Display) -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[500px] sm:h-[600px] lg:h-[680px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/glorietta.png') }}" 
+                                 alt="Glorietta Activity Center 3D LED Spectacular" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Glorietta Activity Center 3D LED</span>
+                            </div>
+                        </div>
 
-                <!-- Luxury Storefront Digital Totems -->
-                <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst4.webp') }}" 
-                         alt="Retail Storefront Digital Columns" 
-                         loading="lazy"
-                         decoding="async"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <span class="text-white text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md">Commercial Mall Digital Totems</span>
+                        <div class="group relative overflow-hidden bg-slate-900 h-[300px] sm:h-[360px] lg:h-[400px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/bgc_arts_center.png') }}" 
+                                 alt="BGC Arts Center Landmark Curved Display" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">BGC Arts Center Digital Monument</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Building Facade Billboard Screen -->
-                <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst5.webp') }}" 
-                         alt="Outdoor Building LED Billboard" 
-                         loading="lazy"
-                         decoding="async"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <span class="text-white text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md">Outdoor Highway LED Billboard</span>
+                    <!-- Column 2: Center (Eastwood City + DoubleDragon + McKinley Hill) -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/eastwood.png') }}" 
+                                 alt="Eastwood City Mega Billboard Screen" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Eastwood City Mega Billboard</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/double_dragon.png') }}" 
+                                 alt="DoubleDragon Plaza Landmark Highway Display" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">DoubleDragon Plaza Highway Display</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/mckinley_hills.png') }}" 
+                                 alt="Megaworld McKinley Hill Architectural LED" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Megaworld McKinley Hill Display</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Column 3: Right (PSE BGC Outdoor + MOA SMX + Solaire Resort) -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[280px] sm:h-[340px] lg:h-[380px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/pse_outdoor.png') }}" 
+                                 alt="Philippine Stock Exchange BGC Tower Outdoor Display" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">PSE Tower BGC Outdoor LED</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/moa_smx.png') }}" 
+                                 alt="SM Mall of Asia SMX Convention LED Display" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">SM Mall of Asia SMX LED</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/solaire.png') }}" 
+                                 alt="Solaire Resort & Entertainment City Display" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Solaire Resort Entertainment LED</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Column 3: Right (Giant Outdoor Curved LED + Airport Info Desk + Restaurant Menu) -->
-            <div class="flex flex-col">
-                <!-- Giant Outdoor Curved 3D LED Billboard -->
-                <div class="group relative overflow-hidden bg-slate-900 h-[280px] sm:h-[340px] lg:h-[380px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst6.webp') }}" 
-                         alt="Giant Outdoor Curved 3D Billboard" 
-                         loading="lazy"
-                         decoding="async"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <span class="text-white text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md">Curved 3D Anamorphic LED</span>
-                    </div>
-                </div>
+            <!-- Slide 3: Corporate, Banking & Smart Retail Systems -->
+            <div class="mosaic-slide w-full shrink-0 m-0 p-0 block">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-black">
+                    
+                    <!-- Column 1: Left (PSE Indoor Trading Floor + Mercedes-Benz Showroom) -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[500px] sm:h-[600px] lg:h-[680px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/pse_indoor.png') }}" 
+                                 alt="PSE Command & Trading Floor Video Wall" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">PSE Command Trading Video Wall</span>
+                            </div>
+                        </div>
 
-                <!-- Smart City / Information Terminal Displays -->
-                <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst7.webp') }}" 
-                         alt="Interactive Digital Terminal" 
-                         loading="lazy"
-                         decoding="async"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <span class="text-white text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md">Transit Information LED Systems</span>
+                        <div class="group relative overflow-hidden bg-slate-900 h-[300px] sm:h-[360px] lg:h-[400px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/mercedes_benz.png') }}" 
+                                 alt="Mercedes-Benz Luxury Auto Showroom LED Wall" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Mercedes-Benz Showroom LED Wall</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Fast Food Restaurant Digital Menu Boards -->
-                <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst8.webp') }}" 
-                         alt="QSR Restaurant Digital Menu Boards" 
-                         loading="lazy"
-                         decoding="async"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <span class="text-white text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md">Commercial QSR Digital Menu Boards</span>
+                    <!-- Column 2: Center (Adidas Megamall + ASICS BGC + Metrobank) -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/adidas_megamall.png') }}" 
+                                 alt="Adidas Megamall Flagship Interactive Display" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Adidas Megamall Flagship Display</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/led/asics_bgc.png') }}" 
+                                 alt="ASICS Bonifacio High Street Digital Totem" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">ASICS Bonifacio High Street Totem</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/philips/metrobank.png') }}" 
+                                 alt="Metrobank Financial Center Video Wall" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Metrobank Financial Center Video Wall</span>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Column 3: Right (PBCom Ayala + McDonald's + KFC) -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[280px] sm:h-[340px] lg:h-[380px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/philips/pbcom_ayala.png') }}" 
+                                 alt="PBCom Tower Ayala Avenue Display" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">PBCom Tower Ayala Avenue Display</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/philips/mcdonalds.png') }}" 
+                                 alt="McDonald's Digital Drive-Thru & Storefront Systems" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">McDonald's Commercial Digital Systems</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
+                            <img src="{{ asset('assets/images/projects/philips/kfc.png') }}" 
+                                 alt="KFC Commercial Digital QSR Displays" 
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">KFC Commercial Digital QSR Displays</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
         </div>
+
+        <!-- Navigation Arrows (Left & Right) -->
+        <button onclick="prevMosaicSlide()" 
+                class="absolute left-3 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-black/65 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 shadow-2xl hover:scale-110 active:scale-95 group focus:outline-none" 
+                title="Previous Project Slide">
+            <i class="fa-solid fa-chevron-left text-sm sm:text-lg group-hover:-translate-x-0.5 transition-transform"></i>
+        </button>
+
+        <button onclick="nextMosaicSlide()" 
+                class="absolute right-3 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-black/65 hover:bg-[#0047ba] text-white border border-white/20 hover:border-blue-400 flex items-center justify-center transition-all duration-300 backdrop-blur-md z-30 shadow-2xl hover:scale-110 active:scale-95 group focus:outline-none" 
+                title="Next Project Slide">
+            <i class="fa-solid fa-chevron-right text-sm sm:text-lg group-hover:translate-x-0.5 transition-transform"></i>
+        </button>
+
+        <!-- Slide Indicators & Theme Label (Floating Pill at Bottom Center) -->
+        <div class="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center space-x-3 bg-black/75 backdrop-blur-md px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-white/20 shadow-2xl">
+            <span id="mosaic-slide-label" class="text-[11px] sm:text-xs font-bold text-white uppercase tracking-wider pr-3 border-r border-white/20 hidden md:inline-block">
+                Collection 1 of 3: Commercial DOOH & Malls
+            </span>
+            <button onclick="goToMosaicSlide(0)" class="mosaic-dot w-7 sm:w-8 h-2 sm:h-2.5 rounded-full bg-[#0047ba] transition-all duration-300 shadow-sm" title="Collection 1"></button>
+            <button onclick="goToMosaicSlide(1)" class="mosaic-dot w-2.5 sm:w-3 h-2 sm:h-2.5 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300 shadow-sm" title="Collection 2"></button>
+            <button onclick="goToMosaicSlide(2)" class="mosaic-dot w-2.5 sm:w-3 h-2 sm:h-2.5 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300 shadow-sm" title="Collection 3"></button>
+        </div>
+
     </div>
 </section>
 
