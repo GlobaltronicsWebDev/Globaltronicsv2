@@ -6,11 +6,11 @@
             <!-- Company Info & Logo -->
             <div class="lg:col-span-2">
                 <a href="{{ url('/') }}" class="inline-block mb-4">
-                    <img src="{{ asset('assets/images/logos/global_logo.webp') }}" 
+                    <img src="{{ asset('assets/images/logos/GBTX_LOGO.png') }}" 
                          alt="Globaltronics Logo" 
                          loading="lazy"
                          decoding="async"
-                         class="h-12 w-auto max-w-[260px] object-contain brightness-0">
+                         class="h-12 w-auto max-w-[260px] object-contain">
                 </a>
                 <p class="text-sm text-slate-600 leading-relaxed max-w-sm mb-6 font-normal">
                     The leading provider of digital out-of-home (DOOH) advertising, LED display boards, and smart digital solutions nationwide.
