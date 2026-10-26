@@ -583,7 +583,7 @@
             <div class="flex flex-col">
                 <!-- Tall Mall Corner 3D LED Screen -->
                 <div class="group relative overflow-hidden bg-slate-900 h-[500px] sm:h-[600px] lg:h-[680px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst1.jpg') }}" 
+                    <img src="{{ asset('assets/images/installations/inst1.webp') }}" 
                          alt="Indoor Corner LED Installation" 
                          loading="lazy"
                          decoding="async"
@@ -595,7 +595,7 @@
 
                 <!-- Mobile LED Billboard Truck -->
                 <div class="group relative overflow-hidden bg-slate-900 h-[300px] sm:h-[360px] lg:h-[400px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst2.jpg') }}" 
+                    <img src="{{ asset('assets/images/installations/inst2.webp') }}" 
                          alt="Mobile LED Truck Billboard" 
                          loading="lazy"
                          decoding="async"
@@ -610,7 +610,7 @@
             <div class="flex flex-col">
                 <!-- Pharmacy Counter Displays -->
                 <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst3.jpg') }}" 
+                    <img src="{{ asset('assets/images/installations/inst3.webp') }}" 
                          alt="Pharmacy Health Store Digital Signage" 
                          loading="lazy"
                          decoding="async"
@@ -622,7 +622,7 @@
 
                 <!-- Luxury Storefront Digital Totems -->
                 <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst4.jpg') }}" 
+                    <img src="{{ asset('assets/images/installations/inst4.webp') }}" 
                          alt="Retail Storefront Digital Columns" 
                          loading="lazy"
                          decoding="async"
@@ -634,7 +634,7 @@
 
                 <!-- Building Facade Billboard Screen -->
                 <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst6.jpg') }}" 
+                    <img src="{{ asset('assets/images/installations/inst5.webp') }}" 
                          alt="Outdoor Building LED Billboard" 
                          loading="lazy"
                          decoding="async"
@@ -649,7 +649,7 @@
             <div class="flex flex-col">
                 <!-- Giant Outdoor Curved 3D LED Billboard -->
                 <div class="group relative overflow-hidden bg-slate-900 h-[280px] sm:h-[340px] lg:h-[380px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst5.jpg') }}" 
+                    <img src="{{ asset('assets/images/installations/inst6.webp') }}" 
                          alt="Giant Outdoor Curved 3D Billboard" 
                          loading="lazy"
                          decoding="async"
@@ -661,7 +661,7 @@
 
                 <!-- Smart City / Information Terminal Displays -->
                 <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
-                    <img src="{{ asset('assets/images/installations/inst7.jpg') }}" 
+                    <img src="{{ asset('assets/images/installations/inst7.webp') }}" 
                          alt="Interactive Digital Terminal" 
                          loading="lazy"
                          decoding="async"
