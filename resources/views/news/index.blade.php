@@ -116,22 +116,27 @@
                     @endphp
                     <article class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-slate-200/80 flex flex-col h-full transition-all duration-300 transform hover:-translate-y-1.5 group">
                         
-                        <!-- Article Image Banner -->
+                        <!-- Article Image Banner (Fully Viewable, Uncropped with Ambient Atmospheric Backdrop) -->
                         <a href="{{ $articleLink }}" 
                            @if($isExternal) target="_blank" rel="noopener noreferrer" @endif
-                           class="block relative h-56 sm:h-60 w-full overflow-hidden bg-slate-900 shrink-0">
+                           class="block relative h-56 sm:h-64 w-full overflow-hidden bg-slate-950 shrink-0 flex items-center justify-center">
                             
+                            <!-- Atmospheric Ambient Blur Background (fills canvas with image's authentic color palette) -->
+                            <img src="{{ $article->image_url }}" 
+                                 alt="" 
+                                 aria-hidden="true"
+                                 class="absolute inset-0 w-full h-full object-cover blur-xl opacity-35 scale-110 pointer-events-none"
+                                 onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
+                            
+                            <!-- Main Image: object-contain ensures NO heads or graphics are cut off regardless of aspect ratio -->
                             <img src="{{ $article->image_url }}" 
                                  alt="{{ $article->title }}" 
-                                 width="400"
-                                 height="240"
-                                 style="aspect-ratio: 5 / 3;"
                                  loading="lazy"
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                 class="relative z-10 w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-500 ease-out"
                                  onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
                             
                             <!-- Gradient Overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none z-10"></div>
                             
                             <!-- Category Badge (Small & Compact Pill) -->
                             <div class="absolute top-3 left-3 inline-flex items-center space-x-1.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 shadow-sm z-10" style="max-width: fit-content;">

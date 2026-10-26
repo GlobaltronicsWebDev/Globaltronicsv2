@@ -79,20 +79,37 @@
             </div>
         </header>
 
-        <!-- Featured Banner Image -->
-        <div class="mb-12 rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-xl relative group">
-            <div class="relative aspect-video w-full overflow-hidden bg-slate-900">
+        <!-- Featured Banner Image (Fully Viewable, Zero Head-Cropping, Ambient Fill) -->
+        <div class="mb-12 rounded-3xl overflow-hidden border border-slate-200 bg-slate-950 shadow-xl relative group">
+            <div class="relative w-full flex items-center justify-center overflow-hidden min-h-[360px] sm:min-h-[460px] max-h-[720px] bg-slate-950">
+                <!-- Atmospheric Ambient Blur Background (fills canvas with image's authentic color palette) -->
                 <img src="{{ $news->image_url }}" 
-                     alt="{{ $news->title }}" 
-                     class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                     alt="" 
+                     aria-hidden="true"
+                     class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none"
                      onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
                 
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+                <!-- Main Featured Image (100% Fully Viewable & Centered - Zero Cropping of Heads or Artwork) -->
+                <img src="{{ $news->image_url }}" 
+                     alt="{{ $news->title }}" 
+                     class="relative z-10 w-auto h-auto max-w-full max-h-[720px] object-contain mx-auto drop-shadow-2xl group-hover:scale-[1.01] transition-transform duration-500"
+                     onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
+                
+                <!-- Subtle Gradient Overlays -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 pointer-events-none z-10"></div>
 
                 <!-- Brand Watermark Badge -->
-                <div class="absolute top-5 left-5 flex items-center space-x-2 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
+                <div class="absolute top-5 left-5 flex items-center space-x-2 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 z-20 shadow-md">
                     <img src="{{ asset('assets/images/logos/global_logo.webp') }}" alt="Globaltronics" class="h-4 sm:h-5 w-auto object-contain brightness-0 invert">
                 </div>
+
+                <!-- View Full High-Res Image Button -->
+                <a href="{{ $news->image_url }}" target="_blank" rel="noopener noreferrer" 
+                   class="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 bg-black/65 hover:bg-[#0047ba] text-white text-xs font-semibold px-3.5 py-1.5 rounded-xl backdrop-blur-md border border-white/20 transition-all opacity-0 group-hover:opacity-100 shadow-lg hover:scale-105" 
+                   title="Open full resolution image in new tab">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center text-[10px]"></i>
+                    <span class="hidden sm:inline">View Full Image</span>
+                </a>
             </div>
             
             <div class="px-6 py-3.5 bg-white border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
@@ -209,12 +226,20 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     @foreach($recentNews as $recent)
                         <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-blue-300 hover:shadow-xl transition-all hover:-translate-y-1 shadow-sm">
-                            <div class="relative h-44 w-full overflow-hidden bg-slate-900">
+                            <div class="relative h-44 w-full overflow-hidden bg-slate-950 flex items-center justify-center">
+                                <!-- Atmospheric Ambient Blur Background -->
+                                <img src="{{ $recent->image_url }}" 
+                                     alt="" 
+                                     aria-hidden="true"
+                                     class="absolute inset-0 w-full h-full object-cover blur-xl opacity-35 scale-110 pointer-events-none"
+                                     onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
+                                
+                                <!-- Primary Uncropped Image -->
                                 <img src="{{ $recent->image_url }}" 
                                      alt="{{ $recent->title }}" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                     class="relative z-10 w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-500"
                                      onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
-                                <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase text-white">
+                                <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-md text-[10px] font-extrabold uppercase text-white z-10">
                                     {{ $recent->badge }}
                                 </div>
                                 @if($recent->has_video)

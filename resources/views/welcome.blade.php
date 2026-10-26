@@ -920,17 +920,25 @@
                     <div class="news-card-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-3 sm:px-4 flex">
                         <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-slate-100 flex flex-col w-full h-full transition-all duration-300 transform hover:-translate-y-1.5 group">
                             
-                            <!-- Image Banner with Globaltronics Badge (Clickable, Opens in New Tab) -->
-                            <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="block relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900 shrink-0">
+                            <!-- Image Banner with Globaltronics Badge (Clickable, Fully Viewable, Uncropped) -->
+                            <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="block relative h-56 sm:h-64 w-full overflow-hidden bg-slate-950 shrink-0 flex items-center justify-center">
+                                <!-- Atmospheric Ambient Blur Background -->
+                                <img src="{{ $articleImage }}" 
+                                     alt="" 
+                                     aria-hidden="true"
+                                     class="absolute inset-0 w-full h-full object-cover blur-xl opacity-35 scale-110 pointer-events-none"
+                                     onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
+
+                                <!-- Main Image (100% Fully Viewable & Centered) -->
                                 <img src="{{ $articleImage }}" 
                                      alt="{{ $articleTitle }}" 
                                      loading="lazy"
                                      decoding="async"
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                     class="relative z-10 w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-500 ease-out"
                                      onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
                                 
                                 <!-- Top Gradient Overlay -->
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40"></div>
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40 pointer-events-none z-10"></div>
                                 
                                 <!-- Globaltronics Overlay Badge / Category (Small & Compact Pill) -->
                                 <div class="absolute top-3 left-3 inline-flex items-center space-x-1.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 shadow-sm z-10" style="max-width: fit-content;">
