@@ -120,7 +120,7 @@
                     
                     <!-- Headline: DIGITAL [DISPLAY] SOLUTION (Straight on one line) -->
                     <h2 class="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-[42px] font-black text-white tracking-tight uppercase leading-none whitespace-nowrap drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
-                        DIGITAL <span style= class="px-2.5 py-0.5 rounded text-white shadow-md inline-block">DISPLAY</span> SOLUTION
+                        DIGITAL <span class="px-2.5 py-0.5 rounded text-white shadow-md inline-block">DISPLAY</span> SOLUTION
                     </h2>
 
                     <!-- Descriptive Paragraph (Straight left-aligned 3-line format) -->
