@@ -100,7 +100,7 @@
                 </div>
             @endif
 
-            <form action="{{ route('admin.login.submit') }}" method="POST" class="space-y-5">
+            <form action="{{ route('admin.login.submit') }}" method="POST" autocomplete="off" class="space-y-5">
                 @csrf
 
                 <!-- Email Input -->
@@ -115,11 +115,11 @@
                         <input id="email" 
                                name="email" 
                                type="email" 
-                    
+                               autocomplete="off"
                                required 
-                               value="{{ old('email', 'mark.estoesta@globaltronics.net') }}" 
+                               value="{{ old('email', '') }}" 
                                class="w-full pl-10 pr-4 py-3 bg-slate-950 border border-slate-700/80 rounded-xl text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0047ba] focus:border-transparent transition-all"
-                               placeholder="email address">
+                               placeholder="Enter your email address">
                     </div>
                 </div>
 
@@ -137,11 +137,10 @@
                         <input id="password" 
                                name="password" 
                                type="password" 
-                          
+                               autocomplete="new-password" 
                                required 
-                               value="password"
                                class="w-full pl-10 pr-10 py-3 bg-slate-950 border border-slate-700/80 rounded-xl text-white text-sm placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#0047ba] focus:border-transparent transition-all"
-                               placeholder="password">
+                               placeholder="Enter your password">
                         <button type="button" 
                                 onclick="togglePasswordVisibility()" 
                                 class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-500 hover:text-slate-300 transition-colors"
@@ -166,16 +165,6 @@
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </button>
             </form>
-
-            <!-- Default Credentials Quick Helper -->
-            <!-- <div class="mt-6 pt-5 border-t border-slate-800 text-center">
-                <p class="text-[11px] text-slate-500 mb-2">Default Admin Demo Credentials:</p>
-                <div class="inline-flex items-center gap-2 bg-slate-950/70 border border-slate-800 px-3 py-1.5 rounded-lg text-xs font-mono text-slate-300">
-                    <span>admin@globaltronics.net</span>
-                    <span class="text-slate-600">/</span>
-                    <span class="text-yellow-400">password</span>
-                </div>
-            </div> -->
 
         </div>
 

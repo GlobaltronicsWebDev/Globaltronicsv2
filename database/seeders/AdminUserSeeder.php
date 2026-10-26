@@ -15,11 +15,11 @@ class AdminUserSeeder extends Seeder
     {
         // Super Administrator
         User::updateOrCreate(
-            ['email' => 'admin@globaltronics.net'],
+            ['email' => 'mark.estoesta@globaltronics.net'],
             [
-                'name' => 'Globaltronics Admin',
+                'name' => 'Mark Estoesta',
                 'role' => 'admin',
-                'password' => Hash::make('password'),
+                'password' => Hash::make('Global@2026!'),
                 'email_verified_at' => now(),
             ]
         );
