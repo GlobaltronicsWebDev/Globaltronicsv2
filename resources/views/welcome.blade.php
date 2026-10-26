@@ -110,26 +110,26 @@
             </div>
             
             <!-- Soft gradient vignette overlay for optimal text contrast and rich atmosphere -->
-            <div class="absolute inset-0 bg-gradient-to-r from-[#030014]/85 via-[#030014]/50 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#030014]/80 via-[#07011f]/45 to-[#030014]/60"></div>
 
-            <!-- Content Container (Responsive for all devices) -->
-            <div class="relative h-full w-full max-w-[1720px] mx-auto px-4 sm:px-8 md:pl-8 lg:pl-12 xl:pl-16 md:pr-4 lg:pr-6 xl:pr-8 flex flex-col md:flex-row items-center justify-between z-10 pt-8 sm:pt-10 md:pt-0 pb-6 md:pb-0 gap-4 md:gap-0">
+            <!-- Content Container (Centered layout with generous breathing room) -->
+            <div class="relative h-full w-full max-w-7xl xl:max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-12 flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10 xl:gap-14 z-10 py-6 md:py-0">
                 
-                <!-- Left Section: Heading & Copy (Centered on mobile, left-aligned on desktop) -->
-                <div class="w-full md:w-[48%] lg:w-[48%] xl:w-[46%] flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 shrink-0 md:pl-16 lg:pl-28 xl:pl-36">
+                <!-- Left Section: Heading & Copy (Centered) -->
+                <div class="w-full lg:w-[44%] xl:w-[42%] flex flex-col justify-center items-center text-center z-10 shrink-0">
                     
                     <!-- Headline: DIGITAL [DISPLAY] SOLUTION -->
                     <h2 class="text-2xl xs:text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-white tracking-tight uppercase leading-[1.2] drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
-                        DIGITAL <span class="bg-[#0070e0] px-2.5 py-0.5 sm:px-3 sm:py-1 rounded text-white shadow-md inline-block">DISPLAY</span> SOLUTION
+                        DIGITAL <span class="bg-[#0070e0] px-3 py-0.5 sm:px-3.5 sm:py-1 rounded text-white shadow-md inline-block">DISPLAY</span> SOLUTION
                     </h2>
 
-                    <!-- Descriptive Paragraph -->
-                    <p class="mt-3.5 sm:mt-5 text-slate-100/95 text-sm xs:text-base sm:text-lg md:text-base lg:text-lg xl:text-xl font-normal leading-relaxed max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+                    <!-- Descriptive Paragraph (Centered with max width) -->
+                    <p class="mt-4 sm:mt-5 text-slate-100/95 text-sm xs:text-base sm:text-lg md:text-base lg:text-lg xl:text-xl font-normal leading-relaxed max-w-lg mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
                         Globaltronics has a wide range of digital signage solutions that will help your brand effectively reach its target audience.
                     </p>
 
-                    <!-- Action Buttons -->
-                    <div class="mt-5 sm:mt-7 flex flex-wrap gap-3.5 justify-center md:justify-start">
+                    <!-- Action Buttons (Centered) -->
+                    <div class="mt-6 sm:mt-8 flex flex-wrap gap-3.5 justify-center items-center">
                         <a href="#solutions" class="inline-flex items-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full bg-[#0070e0] hover:bg-[#005bb5] text-white font-bold text-xs sm:text-sm md:text-base transition-all duration-300 shadow-lg hover:shadow-blue-500/40 transform hover:-translate-y-0.5 border border-blue-300/30">
                             <span>Explore Solutions</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
@@ -140,12 +140,12 @@
                     </div>
                 </div>
 
-                <!-- Right Section: 3X Brighter Multi-panel LED Display Artwork with reflection -->
-                <div class="w-full md:w-[52%] lg:w-[52%] xl:w-[54%] h-auto md:h-full flex items-center justify-center md:justify-end md:pr-10 lg:pr-16 xl:pr-24 z-10 py-2 md:py-0">
-                    <div class="relative w-full max-w-[320px] xs:max-w-[390px] sm:max-w-[460px] md:max-w-[500px] lg:max-w-[620px] xl:max-w-[700px] flex items-center justify-center">
+                <!-- Right Section: 3X Brighter Multi-panel LED Display Artwork (Much bigger and centered) -->
+                <div class="w-full lg:w-[56%] xl:w-[58%] h-auto md:h-full flex items-center justify-center z-10 py-2 md:py-0">
+                    <div class="relative w-full max-w-[420px] xs:max-w-[480px] sm:max-w-[580px] md:max-w-[680px] lg:max-w-[820px] xl:max-w-[940px] flex items-center justify-center">
                         <img src="{{ asset('assets/images/carousel/slider2/DIGITAL-DISPLAY-SOLUTIONS-PNG-1-1.webp') }}" 
                              alt="Globaltronics Digital Display Solution - 3X Brighter than LCD Display" 
-                             class="w-full h-auto object-contain drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)] hover:scale-[1.02] transition-transform duration-500">
+                             class="w-full h-auto max-h-[500px] lg:max-h-[620px] xl:max-h-[700px] object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)] lg:scale-105 xl:scale-110 transform transition-transform duration-500 hover:scale-[1.08] xl:hover:scale-[1.13]">
                     </div>
                 </div>
 
