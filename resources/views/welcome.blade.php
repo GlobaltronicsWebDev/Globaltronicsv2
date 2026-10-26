@@ -882,8 +882,9 @@
 </section>
 
 <!-- What's New Section -->
+<!-- What's New Section (4-Card Desktop Layout) -->
 <section id="news" class="py-20 lg:py-28 bg-[#f8fafc] text-slate-800 relative z-10 border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+    <div class="max-w-7xl xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
         <div class="text-center mb-14 lg:mb-16">
@@ -898,16 +899,16 @@
                 $newsArticles = \App\Models\News::where('is_active', true)
                     ->orderByDesc('published_date')
                     ->orderByDesc('id')
-                    ->take(5)
+                    ->take(8)
                     ->get();
             }
         @endphp
 
-        <!-- Automatic Moving News Slider Container -->
+        <!-- Automatic Moving News Slider Container (Displays 4 Cards on Desktop) -->
         <div id="news-carousel-container" class="relative overflow-hidden w-full pb-4">
             
             <!-- Sliding Track -->
-            <div id="news-track" class="flex transition-transform duration-700 ease-in-out -mx-3 sm:-mx-4">
+            <div id="news-track" class="flex transition-transform duration-700 ease-in-out -mx-2.5 sm:-mx-3">
                 @forelse($newsArticles as $index => $article)
                     @php
                         $articleTitle = is_object($article) ? $article->title : $article['title'];
@@ -917,11 +918,11 @@
                         $articleImage = is_object($article) ? $article->image_url : asset($article['image']);
                         $articleLink = is_object($article) ? $article->read_url : ($article['link_url'] ?? '#news');
                     @endphp
-                    <div class="news-card-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-3 sm:px-4 flex">
+                    <div class="news-card-slide w-full sm:w-1/2 md:w-1/2 lg:w-1/4 shrink-0 px-2.5 sm:px-3 flex">
                         <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-slate-100 flex flex-col w-full h-full transition-all duration-300 transform hover:-translate-y-1.5 group">
                             
                             <!-- Image Banner with Globaltronics Badge (Clickable, Fully Viewable, Uncropped) -->
-                            <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="block relative h-56 sm:h-64 w-full overflow-hidden bg-slate-950 shrink-0 flex items-center justify-center">
+                            <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="block relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950 shrink-0 flex items-center justify-center">
                                 <!-- Atmospheric Ambient Blur Background -->
                                 <img src="{{ $articleImage }}" 
                                      alt="" 
@@ -960,45 +961,45 @@
 
                                     <!-- Centered Play Icon Overlay -->
                                     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-red-600 transition-all duration-300">
-                                            <i class="fa-solid fa-play text-sm sm:text-base translate-x-0.5"></i>
+                                        <div class="w-12 h-12 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-red-600 transition-all duration-300">
+                                            <i class="fa-solid fa-play text-sm translate-x-0.5"></i>
                                         </div>
                                     </div>
                                 @endif
                             </a>
 
                             <!-- News Content Card Area -->
-                            <div class="p-6 sm:p-7 flex flex-col flex-1 text-center justify-between">
+                            <div class="p-5 sm:p-5 flex flex-col flex-1 text-center justify-between">
                                 <div>
                                     <!-- Date -->
-                                    <p class="text-xs font-semibold text-slate-400 mb-3 uppercase tracking-wider">
+                                    <p class="text-[11px] font-semibold text-slate-400 mb-2.5 uppercase tracking-wider">
                                         Date: <span class="text-slate-600 font-medium">{{ $articleDate }}</span>
                                     </p>
 
                                     <!-- Title (Clickable, Opens in New Tab) -->
-                                    <h3 class="text-lg sm:text-xl font-extrabold text-[#0047ba] mb-3 leading-snug group-hover:text-blue-700 transition-colors">
+                                    <h3 class="text-sm sm:text-base font-extrabold text-[#0047ba] mb-2.5 leading-snug group-hover:text-blue-700 transition-colors line-clamp-2">
                                         <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                                            {{ $articleTitle }}
+                                             {{ $articleTitle }}
                                         </a>
                                     </h3>
 
                                     <!-- Description -->
-                                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
+                                    <p class="text-slate-600 text-xs leading-relaxed mb-4 font-normal line-clamp-3">
                                         {{ $articleDesc }}
                                     </p>
                                 </div>
 
                                 <!-- Read More & Video CTA Buttons -->
-                                <div class="pt-2 flex flex-wrap items-center justify-center gap-2">
-                                    <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-2.5 rounded-lg bg-[#0047ba] text-white text-xs sm:text-sm font-bold tracking-wide hover:bg-blue-700 active:scale-95 transition-all shadow-md hover:shadow-blue-500/30">
+                                <div class="pt-2 flex flex-wrap items-center justify-center gap-1.5">
+                                    <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg bg-[#0047ba] text-white text-xs font-bold tracking-wide hover:bg-blue-700 active:scale-95 transition-all shadow-md hover:shadow-blue-500/30">
                                         Read More
                                     </a>
                                     @if(is_object($article) && $article->has_video)
                                         <button type="button" 
                                                 onclick="openVideoModal('{{ $article->youtube_embed_url }}')" 
-                                                class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm font-bold tracking-wide active:scale-95 transition-all shadow-md hover:shadow-red-500/30">
+                                                class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white text-xs font-bold tracking-wide active:scale-95 transition-all shadow-md hover:shadow-red-500/30">
                                             <i class="fa-brands fa-youtube"></i>
-                                            <span>Watch Video</span>
+                                            <span>Video</span>
                                         </button>
                                     @endif
                                 </div>
@@ -1015,19 +1016,22 @@
 
             <!-- News Slider Controls & Indicator Dots -->
             @if(count($newsArticles) > 1)
-            <div class="flex items-center justify-center space-x-4 mt-10">
-                <button onclick="prevNewsSlide()" class="w-10 h-10 rounded-full bg-white shadow-md border border-slate-200 text-[#0047ba] hover:bg-[#0047ba] hover:text-white flex items-center justify-center transition-all duration-300 focus:outline-none" title="Previous News">
-                    <i class="fa-solid fa-chevron-left text-sm"></i>
+            <div class="flex items-center justify-center space-x-4 mt-8">
+                <button onclick="prevNewsSlide()" class="w-9 h-9 rounded-full bg-white shadow-md border border-slate-200 text-[#0047ba] hover:bg-[#0047ba] hover:text-white flex items-center justify-center transition-all duration-300 focus:outline-none" title="Previous News">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
                 </button>
 
                 <div class="flex items-center space-x-2" id="news-dots">
-                    @foreach($newsArticles as $index => $article)
-                        <button onclick="goToNewsSlide({{ $index }})" class="news-dot w-3 h-3 rounded-full {{ $index === 0 ? 'bg-[#0047ba] w-8' : 'bg-slate-300 hover:bg-slate-400' }} transition-all duration-300" title="News {{ $index + 1 }}"></button>
-                    @endforeach
+                    @php
+                        $maxDots = max(1, count($newsArticles) - 3);
+                    @endphp
+                    @for($i = 0; $i < $maxDots; $i++)
+                        <button onclick="goToNewsSlide({{ $i }})" class="news-dot w-2.5 h-2.5 rounded-full {{ $i === 0 ? 'bg-[#0047ba] w-7' : 'bg-slate-300 hover:bg-slate-400' }} transition-all duration-300" title="Slide {{ $i + 1 }}"></button>
+                    @endfor
                 </div>
 
-                <button onclick="nextNewsSlide()" class="w-10 h-10 rounded-full bg-white shadow-md border border-slate-200 text-[#0047ba] hover:bg-[#0047ba] hover:text-white flex items-center justify-center transition-all duration-300 focus:outline-none" title="Next News">
-                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                <button onclick="nextNewsSlide()" class="w-9 h-9 rounded-full bg-white shadow-md border border-slate-200 text-[#0047ba] hover:bg-[#0047ba] hover:text-white flex items-center justify-center transition-all duration-300 focus:outline-none" title="Next News">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
                 </button>
             </div>
             @endif
@@ -1199,8 +1203,8 @@
     let newsSlideInterval;
 
     function getVisibleNewsCardsCount() {
-        if (window.innerWidth >= 1024) return 3;
-        if (window.innerWidth >= 768) return 2;
+        if (window.innerWidth >= 1024) return 4;
+        if (window.innerWidth >= 640) return 2;
         return 1;
     }
 
@@ -1222,9 +1226,9 @@
 
         newsDots.forEach((dot, i) => {
             if (i === currentNewsIndex) {
-                dot.className = 'news-dot h-3 rounded-full bg-[#0047ba] w-8 transition-all duration-300';
+                dot.className = 'news-dot h-2.5 rounded-full bg-[#0047ba] w-7 transition-all duration-300';
             } else {
-                dot.className = 'news-dot w-3 h-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300';
+                dot.className = 'news-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300';
             }
         });
     }

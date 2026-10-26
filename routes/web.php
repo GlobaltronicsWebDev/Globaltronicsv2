@@ -24,7 +24,7 @@ Route::get('/', function () {
     $newsArticles = News::where('is_active', true)
         ->orderByDesc('published_date')
         ->orderByDesc('id')
-        ->take(5)
+        ->take(8)
         ->get();
 
     return view('welcome', compact('newsArticles'));
