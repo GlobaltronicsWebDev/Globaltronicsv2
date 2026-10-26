@@ -588,7 +588,7 @@
                     <!-- Column 1: Left (Tall Mall Corner 3D LED + Mobile LED Truck) -->
                     <div class="flex flex-col">
                         <div class="group relative overflow-hidden bg-slate-900 h-[500px] sm:h-[600px] lg:h-[680px] cursor-pointer">
-                            <img src="{{ asset('assets/images/installations/inst1.webp') }}" 
+                            <img src="{{ asset('assets/images/installations/slider1/inst1.webp') }}" 
                                  alt="In-Mall 3D LED Display" 
                                  loading="lazy"
                                  decoding="async"
@@ -599,7 +599,7 @@
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[300px] sm:h-[360px] lg:h-[400px] cursor-pointer">
-                            <img src="{{ asset('assets/images/installations/inst2.webp') }}" 
+                            <img src="{{ asset('assets/images/installations/slider1/inst2.webp') }}" 
                                  alt="Mobile LED Advertising Truck" 
                                  loading="lazy"
                                  decoding="async"
@@ -613,7 +613,7 @@
                     <!-- Column 2: Center (Pharmacy Displays + Retail Displays + Highway Billboard) -->
                     <div class="flex flex-col">
                         <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                            <img src="{{ asset('assets/images/installations/inst3.webp') }}" 
+                            <img src="{{ asset('assets/images/installations/slider1/inst3.webp') }}" 
                                  alt="Retail Pharmacy Digital Displays" 
                                  loading="lazy"
                                  decoding="async"
@@ -624,7 +624,7 @@
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                            <img src="{{ asset('assets/images/installations/inst4.webp') }}" 
+                            <img src="{{ asset('assets/images/installations/slider1/inst4.webp') }}" 
                                  alt="Commercial Mall Digital Totems" 
                                  loading="lazy"
                                  decoding="async"
@@ -635,7 +635,7 @@
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                            <img src="{{ asset('assets/images/installations/inst5.webp') }}" 
+                            <img src="{{ asset('assets/images/installations/slider1/inst5.webp') }}" 
                                  alt="Outdoor Highway LED Billboard" 
                                  loading="lazy"
                                  decoding="async"
@@ -649,7 +649,7 @@
                     <!-- Column 3: Right (Curved 3D Anamorphic LED + Transit Info + QSR Menu) -->
                     <div class="flex flex-col">
                         <div class="group relative overflow-hidden bg-slate-900 h-[280px] sm:h-[340px] lg:h-[380px] cursor-pointer">
-                            <img src="{{ asset('assets/images/installations/inst6.webp') }}" 
+                            <img src="{{ asset('assets/images/installations/slider1/inst6.webp') }}" 
                                  alt="Curved 3D Anamorphic LED" 
                                  loading="lazy"
                                  decoding="async"
@@ -660,7 +660,7 @@
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
-                            <img src="{{ asset('assets/images/installations/inst7.webp') }}" 
+                            <img src="{{ asset('assets/images/installations/slider1/inst7.webp') }}" 
                                  alt="Transit Information LED Systems" 
                                  loading="lazy"
                                  decoding="async"
@@ -671,7 +671,7 @@
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
-                            <img src="{{ asset('assets/images/installations/inst8.webp') }}" 
+                            <img src="{{ asset('assets/images/installations/slider1/inst8.webp') }}" 
                                  alt="Commercial QSR Digital Menu Boards" 
                                  loading="lazy"
                                  decoding="async"
