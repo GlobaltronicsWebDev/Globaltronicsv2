@@ -30,7 +30,7 @@ class AdminUserSeeder extends Seeder
             [
                 'name' => 'Globaltronics HR Department',
                 'role' => 'hr',
-                'password' => Hash::make('hrpassword123'),
+                'password' => Hash::make('Global@2026'),
                 'email_verified_at' => now(),
             ]
         );
