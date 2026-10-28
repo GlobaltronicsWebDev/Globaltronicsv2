@@ -1090,10 +1090,9 @@
     </div>
 </section>
 
-<!-- What's New Section -->
-<!-- What's New Section (3-Card Desktop Layout) -->
+<!-- What's New Section (3 News Cards Grid) -->
 <section id="news" class="py-20 lg:py-28 bg-[#f8fafc] text-slate-800 relative z-10 border-t border-slate-200">
-    <div class="max-w-7xl xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
         <div class="text-center mb-14 lg:mb-16">
@@ -1103,148 +1102,88 @@
         </div>
 
         @php
-            // If not provided by route or empty, retrieve active news from database with fallback
+            // Retrieve 3 active news articles
             if (!isset($newsArticles) || (is_countable($newsArticles) && count($newsArticles) === 0)) {
                 $newsArticles = \App\Models\News::where('is_active', true)
                     ->orderByDesc('published_date')
                     ->orderByDesc('id')
-                    ->take(8)
+                    ->take(3)
                     ->get();
             }
         @endphp
 
-        <!-- Automatic Moving News Slider Container (Displays 3 Cards on Desktop) -->
-        <div id="news-carousel-container" class="relative overflow-hidden w-full pb-4">
-            
-            <!-- Sliding Track -->
-            <div id="news-track" class="flex transition-transform duration-700 ease-in-out -mx-3 sm:-mx-3.5">
-                @forelse($newsArticles as $index => $article)
-                    @php
-                        $articleTitle = is_object($article) ? $article->title : $article['title'];
-                        $articleDesc = is_object($article) ? $article->description : $article['description'];
-                        $articleDate = is_object($article) ? $article->formatted_date : $article['date'];
-                        $articleBadge = is_object($article) ? ($article->badge ?? 'GLOBALTRONICS') : ($article['badge'] ?? 'GLOBALTRONICS');
-                        $articleImage = is_object($article) ? $article->image_url : asset($article['image']);
-                        $articleLink = is_object($article) ? $article->read_url : ($article['link_url'] ?? '#news');
-                    @endphp
-                    <div class="news-card-slide w-full sm:w-1/2 md:w-1/2 lg:w-1/3 shrink-0 px-3 sm:px-3.5 flex">
-                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-slate-100 flex flex-col w-full h-full transition-all duration-300 transform hover:-translate-y-1.5 group">
-                            
-                            <!-- Image Banner with Globaltronics Badge (Clickable, Fully Viewable, Uncropped) -->
-                            <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="block relative h-52 sm:h-56 w-full overflow-hidden bg-slate-950 shrink-0 flex items-center justify-center">
-                                <!-- Atmospheric Ambient Blur Background -->
-                                <img src="{{ $articleImage }}" 
-                                     alt="" 
-                                     aria-hidden="true"
-                                     class="absolute inset-0 w-full h-full object-cover blur-xl opacity-35 scale-110 pointer-events-none"
-                                     onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
-
-                                <!-- Main Image (100% Fully Viewable & Centered) -->
-                                <img src="{{ $articleImage }}" 
-                                     alt="{{ $articleTitle }}" 
-                                     loading="lazy"
-                                     decoding="async"
-                                     class="relative z-10 w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-500 ease-out"
-                                     onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
-                                
-                                <!-- Top Gradient Overlay -->
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40 pointer-events-none z-10"></div>
-                                
-                                <!-- Globaltronics Overlay Badge / Category (Small & Compact Pill) -->
-                                <div class="absolute top-3 left-3 inline-flex items-center space-x-1.5 bg-black/65 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 shadow-sm z-10" style="max-width: fit-content;">
-                                    <img src="{{ asset('assets/images/logos/global_logo.webp') }}" 
-                                         alt="Globaltronics" 
-                                         class="object-contain brightness-0 invert shrink-0"
-                                         style="height: 11px; max-height: 11px; width: auto; max-width: 56px; display: block;">
-                                    <span class="text-[9px] font-extrabold uppercase tracking-wider text-white border-l border-white/30 pl-1.5 leading-none">
-                                        {{ $articleBadge }}
-                                    </span>
-                                </div>
-
-                                @if(is_object($article) && $article->has_video)
-                                    <!-- Video Available Badge -->
-                                    <div class="absolute top-3 right-3 flex items-center space-x-1.5 bg-red-600/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[9px] font-extrabold shadow-md uppercase tracking-wider z-10">
-                                        <i class="fa-brands fa-youtube text-xs"></i>
-                                        <span>Video</span>
-                                    </div>
-
-                                    <!-- Centered Play Icon Overlay -->
-                                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                        <div class="w-12 h-12 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-red-600 transition-all duration-300">
-                                            <i class="fa-solid fa-play text-sm translate-x-0.5"></i>
-                                        </div>
-                                    </div>
-                                @endif
-                            </a>
-
-                            <!-- News Content Card Area -->
-                            <div class="p-5 sm:p-5 flex flex-col flex-1 text-center justify-between">
-                                <div>
-                                    <!-- Date -->
-                                    <p class="text-[11px] font-semibold text-slate-400 mb-2.5 uppercase tracking-wider">
-                                        Date: <span class="text-slate-600 font-medium">{{ $articleDate }}</span>
-                                    </p>
-
-                                    <!-- Title (Clickable, Opens in New Tab) -->
-                                    <h3 class="text-sm sm:text-base font-extrabold text-[#0047ba] mb-2.5 leading-snug group-hover:text-blue-700 transition-colors line-clamp-2">
-                                        <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                                             {{ $articleTitle }}
-                                        </a>
-                                    </h3>
-
-                                    <!-- Description -->
-                                    <p class="text-slate-600 text-xs leading-relaxed mb-4 font-normal line-clamp-3">
-                                        {{ $articleDesc }}
-                                    </p>
-                                </div>
-
-                                <!-- Read More & Video CTA Buttons -->
-                                <div class="pt-2 flex flex-wrap items-center justify-center gap-1.5">
-                                    <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2 rounded-lg bg-[#0047ba] text-white text-xs font-bold tracking-wide hover:bg-blue-700 active:scale-95 transition-all shadow-md hover:shadow-blue-500/30">
-                                        Read More
-                                    </a>
-                                    @if(is_object($article) && $article->has_video)
-                                        <button type="button" 
-                                                onclick="openVideoModal('{{ $article->youtube_embed_url }}')" 
-                                                class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white text-xs font-bold tracking-wide active:scale-95 transition-all shadow-md hover:shadow-red-500/30">
-                                            <i class="fa-brands fa-youtube"></i>
-                                            <span>Video</span>
-                                        </button>
-                                    @endif
-                                </div>
+        <!-- 3-Card Grid Matching Sample Image -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            @forelse($newsArticles as $index => $article)
+                @php
+                    $articleTitle = is_object($article) ? $article->title : $article['title'];
+                    $articleDesc = is_object($article) ? $article->description : $article['description'];
+                    $articleDate = is_object($article) ? $article->formatted_date : $article['date'];
+                    $articleImage = is_object($article) ? $article->image_url : asset($article['image']);
+                    $articleLink = is_object($article) ? $article->read_url : ($article['link_url'] ?? '#news');
+                @endphp
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-slate-100 flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1.5 group">
+                    
+                    <!-- Top Image Banner (Full bleed, uncropped, matching sample) -->
+                    <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="block relative aspect-square sm:aspect-[4/3] lg:aspect-square w-full overflow-hidden bg-slate-100 shrink-0">
+                        <img src="{{ $articleImage }}" 
+                             alt="{{ $articleTitle }}" 
+                             loading="lazy"
+                             decoding="async"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                             onerror="this.src='{{ asset('assets/images/news/news1.jpg') }}'">
+                        
+                        @if(is_object($article) && $article->has_video)
+                            <div class="absolute top-3 right-3 flex items-center space-x-1.5 bg-red-600/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[9px] font-extrabold shadow-md uppercase tracking-wider z-10">
+                                <i class="fa-brands fa-youtube text-xs"></i>
+                                <span>Video</span>
                             </div>
+                        @endif
+                    </a>
 
+                    <!-- News Content Area (Centered typography matching sample) -->
+                    <div class="p-6 sm:p-7 flex flex-col flex-1 text-center justify-between">
+                        <div>
+                            <!-- Date -->
+                            <p class="text-xs font-semibold text-slate-400 mb-2.5 uppercase tracking-wider">
+                                Date: <span class="text-slate-600 font-medium">{{ $articleDate }}</span>
+                            </p>
+
+                            <!-- Title -->
+                            <h3 class="text-base sm:text-lg font-bold text-[#0047ba] mb-3 leading-snug group-hover:text-blue-700 transition-colors line-clamp-2">
+                                <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                    {{ $articleTitle }}
+                                </a>
+                            </h3>
+
+                            <!-- Description -->
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6 font-normal line-clamp-3">
+                                {{ $articleDesc }}
+                            </p>
+                        </div>
+
+                        <!-- Read More & Video CTA Buttons -->
+                        <div class="pt-2 flex flex-wrap items-center justify-center gap-2">
+                            <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="inline-block px-7 py-2.5 rounded-lg bg-[#0047ba] text-white text-xs sm:text-sm font-bold tracking-wide hover:bg-blue-700 active:scale-95 transition-all shadow-md hover:shadow-blue-500/30">
+                                Read More
+                            </a>
+                            @if(is_object($article) && $article->has_video)
+                                <button type="button" 
+                                        onclick="openVideoModal('{{ $article->youtube_embed_url }}')" 
+                                        class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white text-xs font-bold tracking-wide active:scale-95 transition-all shadow-md hover:shadow-red-500/30">
+                                    <i class="fa-brands fa-youtube"></i>
+                                    <span>Video</span>
+                                </button>
+                            @endif
                         </div>
                     </div>
-                @empty
-                    <div class="w-full text-center py-12 text-slate-500">
-                        <p class="text-base font-semibold">No news updates at this moment.</p>
-                    </div>
-                @endforelse
-            </div>
 
-            <!-- News Slider Controls & Indicator Dots -->
-            @if(count($newsArticles) > 1)
-            <div class="flex items-center justify-center space-x-4 mt-8">
-                <button onclick="prevNewsSlide()" class="w-9 h-9 rounded-full bg-white shadow-md border border-slate-200 text-[#0047ba] hover:bg-[#0047ba] hover:text-white flex items-center justify-center transition-all duration-300 focus:outline-none" title="Previous News">
-                    <i class="fa-solid fa-chevron-left text-xs"></i>
-                </button>
-
-                <div class="flex items-center space-x-2" id="news-dots">
-                    @php
-                        $maxDots = max(1, count($newsArticles) - 2);
-                    @endphp
-                    @for($i = 0; $i < $maxDots; $i++)
-                        <button onclick="goToNewsSlide({{ $i }})" class="news-dot w-2.5 h-2.5 rounded-full {{ $i === 0 ? 'bg-[#0047ba] w-7' : 'bg-slate-300 hover:bg-slate-400' }} transition-all duration-300" title="Slide {{ $i + 1 }}"></button>
-                    @endfor
                 </div>
-
-                <button onclick="nextNewsSlide()" class="w-9 h-9 rounded-full bg-white shadow-md border border-slate-200 text-[#0047ba] hover:bg-[#0047ba] hover:text-white flex items-center justify-center transition-all duration-300 focus:outline-none" title="Next News">
-                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                </button>
-            </div>
-            @endif
-
+            @empty
+                <div class="col-span-3 text-center py-12 text-slate-500">
+                    <p class="text-base font-semibold">No news updates at this moment.</p>
+                </div>
+            @endforelse
         </div>
 
         <!-- Load More Action Button -->
@@ -1404,80 +1343,6 @@
         startTestimonialInterval();
     }
 
-    // News Multi-Card Automatic Carousel Logic
-    let currentNewsIndex = 0;
-    const newsTrack = document.getElementById('news-track');
-    const newsCards = document.querySelectorAll('.news-card-slide');
-    const newsDots = document.querySelectorAll('.news-dot');
-    let newsSlideInterval;
-
-    function getVisibleNewsCardsCount() {
-        if (window.innerWidth >= 1024) return 3;
-        if (window.innerWidth >= 640) return 2;
-        return 1;
-    }
-
-    function showNewsSlide(index) {
-        if (!newsCards.length || !newsTrack) return;
-        const visibleCount = getVisibleNewsCardsCount();
-        const maxIndex = Math.max(0, newsCards.length - visibleCount);
-
-        if (index > maxIndex) {
-            currentNewsIndex = 0;
-        } else if (index < 0) {
-            currentNewsIndex = maxIndex;
-        } else {
-            currentNewsIndex = index;
-        }
-
-        const shiftPercentage = (currentNewsIndex * 100) / newsCards.length;
-        newsTrack.style.transform = `translateX(-${shiftPercentage}%)`;
-
-        newsDots.forEach((dot, i) => {
-            if (i === currentNewsIndex) {
-                dot.className = 'news-dot h-2.5 rounded-full bg-[#0047ba] w-7 transition-all duration-300';
-            } else {
-                dot.className = 'news-dot w-2.5 h-2.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all duration-300';
-            }
-        });
-    }
-
-    function nextNewsSlide() {
-        showNewsSlide(currentNewsIndex + 1);
-        resetNewsInterval();
-    }
-
-    function prevNewsSlide() {
-        showNewsSlide(currentNewsIndex - 1);
-        resetNewsInterval();
-    }
-
-    function goToNewsSlide(index) {
-        showNewsSlide(index);
-        resetNewsInterval();
-    }
-
-    function startNewsInterval() {
-        clearInterval(newsSlideInterval);
-        newsSlideInterval = setInterval(() => {
-            showNewsSlide(currentNewsIndex + 1);
-        }, 4500);
-    }
-
-    function resetNewsInterval() {
-        clearInterval(newsSlideInterval);
-        startNewsInterval();
-    }
-
-    function toggleLoadMoreNews(btn) {
-        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Loading updates...';
-        setTimeout(() => {
-            btn.innerHTML = 'All Updates Loaded <i class="fa-solid fa-check ml-2"></i>';
-            btn.classList.remove('bg-[#0047ba]', 'hover:bg-blue-700');
-            btn.classList.add('bg-emerald-600', 'hover:bg-emerald-700');
-        }, 700);
-    }
-
     // Full Width Mosaic Photogrid Carousel Logic (Automatic 6-second rotation)
     let currentMosaicIndex = 0;
     let mosaicInterval = null;
@@ -1568,16 +1433,6 @@
         if (e.key === 'ArrowRight') nextSlide();
     });
 
-    const newsContainer = document.getElementById('news-carousel-container');
-    if (newsContainer) {
-        newsContainer.addEventListener('mouseenter', () => clearInterval(newsSlideInterval));
-        newsContainer.addEventListener('mouseleave', startNewsInterval);
-    }
-
-    window.addEventListener('resize', () => {
-        showNewsSlide(currentNewsIndex);
-    });
-
     // Background Preloader (Ready for additional slides)
     function preloadRemainingSlides() {
         // Reserved for future slider assets
@@ -1589,8 +1444,6 @@
         startAutoSlide();
         showTestimonial(0);
         startTestimonialInterval();
-        showNewsSlide(0);
-        startNewsInterval();
         showMosaicSlide(0);
         startMosaicInterval();
         preloadRemainingSlides();
