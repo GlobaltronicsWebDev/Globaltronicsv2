@@ -130,11 +130,11 @@
 
                                 <!-- Position -->
                                 <td class="py-4 px-5">
-                                    <div class="font-bold text-blue-400">
+                                    <div class="font-bold text-[#0047ba] text-sm">
                                         {{ $app->job_title }}
                                     </div>
                                     @if($app->career)
-                                        <span class="inline-block text-[10px] text-slate-400 uppercase tracking-wider">
+                                        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold text-[#0047ba] bg-blue-50 border border-blue-200 uppercase tracking-wider mt-1">
                                             {{ $app->career->department }}
                                         </span>
                                     @endif

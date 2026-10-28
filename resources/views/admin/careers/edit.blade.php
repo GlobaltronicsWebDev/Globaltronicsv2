@@ -55,25 +55,27 @@
 
                 <!-- Department -->
                 <div>
-                    <label for="department" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                        Department <span class="text-red-400">*</span>
+                    <label for="department" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                        Department <span class="text-red-500">*</span>
                     </label>
                     <input type="text" 
                            id="department" 
                            name="department" 
                            required 
                            value="{{ old('department', $career->department) }}" 
-                           class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-xl text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0047ba] transition-all">
+                           placeholder="e.g. Sales & Marketing, Technical & Engineering..." 
+                           class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047ba] transition-all">
                     
-                    <div class="flex flex-wrap gap-1.5 mt-2">
-                        <span class="text-[10px] text-slate-400 py-0.5">Quick picks:</span>
-                        <button type="button" onclick="setDepartment('Engineering')" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded">Engineering</button>
-                        <button type="button" onclick="setDepartment('Sales & Marketing')" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded">Sales & Marketing</button>
-                        <button type="button" onclick="setDepartment('Creative / Tech')" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded">Creative / Tech</button>
-                        <button type="button" onclick="setDepartment('Operations')" class="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded">Operations</button>
+                    <div class="flex flex-wrap gap-1.5 mt-2.5 items-center">
+                        <span class="text-[11px] font-semibold text-slate-500 py-0.5">Quick picks:</span>
+                        <button type="button" onclick="setDepartment('Sales & Marketing')" class="px-2.5 py-1 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-[#0047ba] border border-slate-200 hover:border-blue-300 text-[11px] font-semibold rounded-lg transition-colors">Sales & Marketing</button>
+                        <button type="button" onclick="setDepartment('Technical & Engineering')" class="px-2.5 py-1 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-[#0047ba] border border-slate-200 hover:border-blue-300 text-[11px] font-semibold rounded-lg transition-colors">Technical & Engineering</button>
+                        <button type="button" onclick="setDepartment('Operations & Logistics')" class="px-2.5 py-1 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-[#0047ba] border border-slate-200 hover:border-blue-300 text-[11px] font-semibold rounded-lg transition-colors">Operations & Logistics</button>
+                        <button type="button" onclick="setDepartment('Creative & Design')" class="px-2.5 py-1 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-[#0047ba] border border-slate-200 hover:border-blue-300 text-[11px] font-semibold rounded-lg transition-colors">Creative & Design</button>
+                        <button type="button" onclick="setDepartment('Human Resources')" class="px-2.5 py-1 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-[#0047ba] border border-slate-200 hover:border-blue-300 text-[11px] font-semibold rounded-lg transition-colors">Human Resources</button>
                     </div>
                     @error('department')
-                        <p class="text-red-400 text-xs mt-1.5 font-medium">{{ $message }}</p>
+                        <p class="text-red-500 text-xs mt-1.5 font-medium">{{ $message }}</p>
                     @enderror
                 </div>
 

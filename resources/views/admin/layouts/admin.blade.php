@@ -117,6 +117,15 @@
             color: #1e293b !important;
         }
 
+        .text-blue-300,
+        .text-blue-400 {
+            color: #0047ba !important;
+        }
+
+        .text-emerald-400 {
+            color: #047857 !important;
+        }
+
         /* Turn text-white into bold readable dark text, EXCEPT on primary colored buttons/badges */
         .text-white:not(button.bg-\[\#0047ba\]):not(button.bg-\[\#0047ba\] *):not(a.bg-\[\#0047ba\]):not(a.bg-\[\#0047ba\] *):not(button.bg-red-600):not(button.bg-red-600 *):not(a.bg-red-600):not(a.bg-red-600 *):not(button.bg-blue-600):not(button.bg-blue-600 *):not(a.bg-blue-600):not(a.bg-blue-600 *):not(button.bg-emerald-600):not(button.bg-emerald-600 *):not(a.bg-emerald-600):not(a.bg-emerald-600 *):not(.bg-amber-500 *):not(#admin-top-brand *):not(.badge-white-text):not(.text-white-force) {
             color: #0f172a !important;

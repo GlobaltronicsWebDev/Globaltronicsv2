@@ -74,15 +74,15 @@
             </div>
 
             <div class="flex items-center space-x-2 w-full md:w-auto justify-end">
-                <button type="submit" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold transition-colors">
+                <button type="submit" class="px-4 py-2.5 rounded-xl bg-[#0047ba] hover:bg-blue-700 text-white text-xs font-bold transition-colors shadow-sm">
                     Filter
                 </button>
                 @if(request()->hasAny(['search', 'department', 'status']))
-                    <a href="{{ route('admin.careers.index') }}" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 text-xs transition-colors">
+                    <a href="{{ route('admin.careers.index') }}" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-semibold transition-colors">
                         Reset
                     </a>
                 @endif
-                <a href="{{ route('admin.careers.create') }}" class="px-4 py-2.5 rounded-xl bg-[#0047ba] hover:bg-blue-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-md shadow-blue-600/30 transition-all active:scale-95">
+                <a href="{{ route('admin.careers.create') }}" class="px-4 py-2.5 rounded-xl bg-[#0047ba] hover:bg-blue-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition-all active:scale-95">
                     <i class="fa-solid fa-plus text-xs"></i>
                     <span>Post New Opening</span>
                 </a>
@@ -111,7 +111,7 @@
         @else
             <div class="overflow-x-auto">
                 <table class="w-full text-left text-xs text-slate-300">
-                    <thead class="bg-slate-950/70 uppercase text-[10px] tracking-wider text-slate-400 border-b border-slate-800 font-extrabold">
+                    <thead class="bg-slate-50 uppercase text-[10px] tracking-wider text-slate-600 border-b border-slate-200 font-extrabold">
                         <tr>
                             <th class="py-3.5 px-6">Job Position & Overview</th>
                             <th class="py-3.5 px-4">Department</th>
@@ -120,33 +120,33 @@
                             <th class="py-3.5 px-6 text-right">Actions</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-slate-800/60 font-medium">
+                    <tbody class="divide-y divide-slate-100 font-medium">
                         @foreach($careers as $career)
-                            <tr class="hover:bg-slate-800/40 transition-colors group">
+                            <tr class="hover:bg-slate-50/80 transition-colors group">
                                 
                                 <!-- Title & Description -->
                                 <td class="py-4 px-6 max-w-xs sm:max-w-md">
-                                    <a href="{{ route('admin.careers.edit', $career) }}" class="font-bold text-white hover:text-blue-400 transition-colors text-sm line-clamp-1">
+                                    <a href="{{ route('admin.careers.edit', $career) }}" class="font-bold text-slate-900 hover:text-[#0047ba] transition-colors text-sm line-clamp-1">
                                         {{ $career->title }}
                                     </a>
-                                    <p class="text-slate-400 text-xs mt-1 line-clamp-2 leading-relaxed">
+                                    <p class="text-slate-600 text-xs mt-1 line-clamp-2 leading-relaxed font-normal">
                                         {{ $career->description }}
                                     </p>
                                 </td>
 
                                 <!-- Department -->
                                 <td class="py-4 px-4 whitespace-nowrap">
-                                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-[10px] font-extrabold tracking-wider uppercase bg-[#0047ba]/20 text-blue-300 border border-blue-500/30">
+                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase bg-blue-50 text-[#0047ba] border border-blue-200 shadow-xs">
                                         {{ $career->department }}
                                     </span>
                                 </td>
 
                                 <!-- Type & Location -->
-                                <td class="py-4 px-4 whitespace-nowrap text-slate-300">
-                                    <div class="text-xs font-semibold text-white">
+                                <td class="py-4 px-4 whitespace-nowrap">
+                                    <div class="text-xs font-semibold text-slate-800">
                                         {{ $career->employment_type }}
                                     </div>
-                                    <div class="text-[11px] text-slate-400 flex items-center gap-1 mt-0.5">
+                                    <div class="text-[11px] text-slate-600 flex items-center gap-1.5 mt-0.5">
                                         <i class="fa-solid fa-location-dot text-[#0047ba]"></i>
                                         <span class="truncate max-w-[180px]">{{ $career->location }}</span>
                                     </div>
@@ -158,9 +158,9 @@
                                         @csrf
                                         @method('PATCH')
                                         <button type="submit" 
-                                                class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all {{ $career->is_active ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20' : 'bg-slate-800 text-slate-400 border border-slate-700 hover:bg-slate-700' }}"
+                                                class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all {{ $career->is_active ? 'bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100' : 'bg-slate-100 text-slate-600 border border-slate-200 hover:bg-slate-200' }}"
                                                 title="Click to toggle visibility on website">
-                                            <span class="w-1.5 h-1.5 rounded-full {{ $career->is_active ? 'bg-emerald-400 animate-pulse' : 'bg-slate-500' }}"></span>
+                                            <span class="w-1.5 h-1.5 rounded-full {{ $career->is_active ? 'bg-emerald-500' : 'bg-slate-400' }}"></span>
                                             <span>{{ $career->is_active ? 'Active' : 'Draft' }}</span>
                                         </button>
                                     </form>
@@ -173,14 +173,14 @@
                                         <!-- View Live -->
                                         <a href="{{ $career->read_url }}" 
                                            target="_blank" 
-                                           class="p-2 rounded-lg bg-slate-800 hover:bg-emerald-600 text-slate-300 hover:text-white transition-colors border border-slate-700" 
+                                           class="p-2 rounded-lg bg-slate-100 hover:bg-emerald-600 text-slate-600 hover:text-white transition-colors border border-slate-200" 
                                            title="View Job Details in new tab">
                                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                         </a>
 
                                         <!-- Edit -->
                                         <a href="{{ route('admin.careers.edit', $career) }}" 
-                                           class="p-2 rounded-lg bg-slate-800 hover:bg-[#0047ba] text-slate-300 hover:text-white transition-colors border border-slate-700" 
+                                           class="p-2 rounded-lg bg-slate-100 hover:bg-[#0047ba] text-slate-600 hover:text-white transition-colors border border-slate-200" 
                                            title="Edit Opening">
                                             <i class="fa-solid fa-pen-to-square"></i>
                                         </a>
@@ -191,7 +191,7 @@
                                             @method('DELETE')
                                             <button type="button" 
                                                     onclick="promptDeleteCareer({{ $career->id }}, {{ json_encode($career->title) }})"
-                                                    class="p-2 rounded-lg bg-slate-800 hover:bg-red-600 text-slate-300 hover:text-white transition-colors border border-slate-700" 
+                                                    class="p-2 rounded-lg bg-slate-100 hover:bg-red-600 text-slate-600 hover:text-white transition-colors border border-slate-200" 
                                                     title="Delete Opening">
                                                 <i class="fa-solid fa-trash"></i>
                                             </button>
