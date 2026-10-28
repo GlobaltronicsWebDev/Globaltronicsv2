@@ -1430,7 +1430,7 @@
             currentNewsIndex = index;
         }
 
-        const shiftPercentage = (currentNewsIndex * (100 / visibleCount));
+        const shiftPercentage = (currentNewsIndex * 100) / newsCards.length;
         newsTrack.style.transform = `translateX(-${shiftPercentage}%)`;
 
         newsDots.forEach((dot, i) => {
