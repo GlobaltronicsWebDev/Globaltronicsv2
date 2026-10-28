@@ -1091,7 +1091,7 @@
 </section>
 
 <!-- What's New Section -->
-<!-- What's New Section (4-Card Desktop Layout) -->
+<!-- What's New Section (3-Card Desktop Layout) -->
 <section id="news" class="py-20 lg:py-28 bg-[#f8fafc] text-slate-800 relative z-10 border-t border-slate-200">
     <div class="max-w-7xl xl:max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -1113,11 +1113,11 @@
             }
         @endphp
 
-        <!-- Automatic Moving News Slider Container (Displays 4 Cards on Desktop) -->
+        <!-- Automatic Moving News Slider Container (Displays 3 Cards on Desktop) -->
         <div id="news-carousel-container" class="relative overflow-hidden w-full pb-4">
             
             <!-- Sliding Track -->
-            <div id="news-track" class="flex transition-transform duration-700 ease-in-out -mx-2.5 sm:-mx-3">
+            <div id="news-track" class="flex transition-transform duration-700 ease-in-out -mx-3 sm:-mx-3.5">
                 @forelse($newsArticles as $index => $article)
                     @php
                         $articleTitle = is_object($article) ? $article->title : $article['title'];
@@ -1127,11 +1127,11 @@
                         $articleImage = is_object($article) ? $article->image_url : asset($article['image']);
                         $articleLink = is_object($article) ? $article->read_url : ($article['link_url'] ?? '#news');
                     @endphp
-                    <div class="news-card-slide w-full sm:w-1/2 md:w-1/2 lg:w-1/4 shrink-0 px-2.5 sm:px-3 flex">
+                    <div class="news-card-slide w-full sm:w-1/2 md:w-1/2 lg:w-1/3 shrink-0 px-3 sm:px-3.5 flex">
                         <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-slate-100 flex flex-col w-full h-full transition-all duration-300 transform hover:-translate-y-1.5 group">
                             
                             <!-- Image Banner with Globaltronics Badge (Clickable, Fully Viewable, Uncropped) -->
-                            <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="block relative h-48 sm:h-52 w-full overflow-hidden bg-slate-950 shrink-0 flex items-center justify-center">
+                            <a href="{{ $articleLink }}" target="_blank" rel="noopener noreferrer" class="block relative h-52 sm:h-56 w-full overflow-hidden bg-slate-950 shrink-0 flex items-center justify-center">
                                 <!-- Atmospheric Ambient Blur Background -->
                                 <img src="{{ $articleImage }}" 
                                      alt="" 
@@ -1232,7 +1232,7 @@
 
                 <div class="flex items-center space-x-2" id="news-dots">
                     @php
-                        $maxDots = max(1, count($newsArticles) - 3);
+                        $maxDots = max(1, count($newsArticles) - 2);
                     @endphp
                     @for($i = 0; $i < $maxDots; $i++)
                         <button onclick="goToNewsSlide({{ $i }})" class="news-dot w-2.5 h-2.5 rounded-full {{ $i === 0 ? 'bg-[#0047ba] w-7' : 'bg-slate-300 hover:bg-slate-400' }} transition-all duration-300" title="Slide {{ $i + 1 }}"></button>
@@ -1412,7 +1412,7 @@
     let newsSlideInterval;
 
     function getVisibleNewsCardsCount() {
-        if (window.innerWidth >= 1024) return 4;
+        if (window.innerWidth >= 1024) return 3;
         if (window.innerWidth >= 640) return 2;
         return 1;
     }
