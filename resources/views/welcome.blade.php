@@ -602,7 +602,7 @@
         </div>
     </div>
 
-    <!-- Full Width Edge-to-Edge Mosaic Photo Grid Carousel (3 Themed Slides) -->
+    <!-- Full Width Edge-to-Edge Mosaic Photo Grid Carousel (4 Themed Slides) -->
     <div id="mosaic-carousel-container" class="relative w-full overflow-hidden bg-black select-none group/carousel leading-none m-0 p-0 block">
         
         <!-- Sliding Track Container -->
@@ -913,6 +913,99 @@
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
                                 <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ayala Cinema LED Installation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Slide 4: Nationwide LED Billboard & Mall Installations -->
+            <div class="mosaic-slide w-full shrink-0 m-0 p-0 block">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-black">
+
+                    <!-- Column 1: Cebu + Davao -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[500px] sm:h-[600px] lg:h-[680px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/slider4/Metro colon cebu (1).webp') }}"
+                                 alt="Metro Colon Cebu LED billboard installation"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Metro Colon Cebu LED Billboard</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[300px] sm:h-[360px] lg:h-[400px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/slider4/Davao san pedro 1.webp') }}"
+                                 alt="San Pedro Davao LED billboard installation"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Davao San Pedro LED Billboard</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Cagayan + Bacoor + Trinoma -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/slider4/Cagayan WESTBOUND Photo Simulation 2_05.21.25.webp') }}"
+                                 alt="Cagayan Westbound LED billboard photo simulation"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Cagayan Westbound LED Billboard</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/slider4/bacoor.webp') }}"
+                                 alt="Bacoor LED billboard installation"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Bacoor LED Billboard</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/slider4/Ayala trinoma.webp') }}"
+                                 alt="Ayala Malls Trinoma LED installation"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ayala Malls Trinoma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: ATC + Arca South -->
+                    <div class="flex flex-col">
+                        <div class="group relative overflow-hidden bg-slate-900 h-[500px] sm:h-[600px] lg:h-[680px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/slider4/ATC 2.webp') }}"
+                                 alt="Ayala Malls Alabang Town Center LED installation"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Alabang Town Center LED Installation</span>
+                            </div>
+                        </div>
+
+                        <div class="group relative overflow-hidden bg-slate-900 h-[300px] sm:h-[360px] lg:h-[400px] cursor-pointer">
+                            <img src="{{ asset('assets/images/installations/slider4/ARCA 2.webp') }}"
+                                 alt="Arca South LED installation"
+                                 loading="lazy"
+                                 decoding="async"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Arca South LED Installation</span>
                             </div>
                         </div>
                     </div>
