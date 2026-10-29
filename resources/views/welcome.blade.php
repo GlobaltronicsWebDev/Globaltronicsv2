@@ -1096,7 +1096,7 @@
         
         <!-- Section Header -->
         <div class="text-center mb-14 lg:mb-16">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0047ba] tracking-tight underline decoration-4 decoration-[#0047ba] underline-offset-8 inline-block">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0047ba] tracking-tight underline decoration-4 decoration-[#0047ba] inline-block">
                 What's New
             </h2>
         </div>
