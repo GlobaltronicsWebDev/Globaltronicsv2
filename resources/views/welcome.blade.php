@@ -68,6 +68,21 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ── Scroll-performance: promote composited layers ── */
+        #testimonial-track,
+        #mosaic-track {
+            will-change: transform;
+            transform: translateZ(0);
+        }
+        .carousel-slide {
+            will-change: opacity;
+        }
+        /* Prevent costly full-page stacking context on non-scrolled sections */
+        .animate-marquee-infinite {
+            will-change: transform;
+            transform: translateZ(0);
+        }
     </style>
 @endpush
 
@@ -944,7 +959,7 @@
             <!-- Group 1 -->
             <div class="flex items-center space-x-12 sm:space-x-16 lg:space-x-20 shrink-0 pr-12 sm:pr-16 lg:pr-20">
                 @foreach($clientLogos as $logo)
-                    <div class="h-16 sm:h-20 lg:h-24 w-36 sm:w-48 lg:w-56 flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300 transform hover:scale-110">
+                    <div class="client-logo-item h-16 sm:h-20 lg:h-24 w-36 sm:w-48 lg:w-56 flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-105">
                         <img src="{{ asset('assets/images/client_logo/' . $logo) }}" 
                              alt="{{ pathinfo($logo, PATHINFO_FILENAME) }}" 
                              width="224"
@@ -952,14 +967,14 @@
                              loading="lazy"
                              decoding="async"
                              style="aspect-ratio: 224 / 96;"
-                             class="max-h-full max-w-full w-auto h-auto object-contain filter drop-shadow-sm">
+                             class="max-h-full max-w-full w-auto h-auto object-contain">
                     </div>
                 @endforeach
             </div>
             <!-- Group 2 (Duplicate for Seamless Loop) -->
             <div class="flex items-center space-x-12 sm:space-x-16 lg:space-x-20 shrink-0 pr-12 sm:pr-16 lg:pr-20" aria-hidden="true">
                 @foreach($clientLogos as $logo)
-                    <div class="h-16 sm:h-20 lg:h-24 w-36 sm:w-48 lg:w-56 flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300 transform hover:scale-110">
+                    <div class="client-logo-item h-16 sm:h-20 lg:h-24 w-36 sm:w-48 lg:w-56 flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-105">
                         <img src="{{ asset('assets/images/client_logo/' . $logo) }}" 
                              alt="{{ pathinfo($logo, PATHINFO_FILENAME) }}" 
                              width="224"
@@ -967,7 +982,7 @@
                              loading="lazy"
                              decoding="async"
                              style="aspect-ratio: 224 / 96;"
-                             class="max-h-full max-w-full w-auto h-auto object-contain filter drop-shadow-sm">
+                             class="max-h-full max-w-full w-auto h-auto object-contain">
                     </div>
                 @endforeach
             </div>

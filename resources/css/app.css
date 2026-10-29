@@ -42,8 +42,31 @@ body {
     display: flex;
     width: max-content;
     animation: logoMarquee 45s linear infinite;
+    /* GPU-composited layer — prevents scroll jank */
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .animate-marquee-infinite:hover {
     animation-play-state: paused;
+}
+
+/* ── Scroll-performance optimisations ── */
+
+/* Client logos: avoid per-frame filter repaint; use opacity-only hover */
+.client-logo-item {
+    will-change: auto;          /* don't promote every logo to its own layer */
+    contain: layout style;      /* limit browser recalc scope */
+}
+
+/* Hero carousel slides: composited opacity transitions only */
+.carousel-slide {
+    will-change: opacity;
+}
+
+/* Mosaic / testimonial track: composited translate */
+#mosaic-track,
+#testimonial-track {
+    will-change: transform;
+    transform: translateZ(0);
 }
