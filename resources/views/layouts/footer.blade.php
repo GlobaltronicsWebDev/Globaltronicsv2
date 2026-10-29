@@ -6,7 +6,7 @@
             <!-- Company Info & Logo -->
             <div class="lg:col-span-2">
                 <a href="{{ url('/') }}" class="inline-block mb-4">
-                    <img src="{{ asset('assets/images/logos/GBTX_LOGO.png') }}" 
+                    <img src="{{ asset('assets/images/logo/GBTX_LOGO_FOOTER.png') }}" 
                          alt="Globaltronics Logo" 
                          loading="lazy"
                          decoding="async"
