@@ -56,6 +56,18 @@
                 height: 380px !important;
             }
         }
+
+        /* ── Scroll-reveal animation for section titles ── */
+        .section-title-reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .section-title-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 @endpush
 
@@ -329,7 +341,7 @@
 <section id="services" class="py-20 lg:py-24 bg-white text-slate-800 relative z-10 border-t border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 mb-12 text-center">
         <!-- Section Header -->
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0047ba] uppercase tracking-wide mb-4">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0047ba] uppercase tracking-wide mb-4 section-title-reveal">
             OUR PRODUCTS AND SERVICES
         </h2>
         <div class="max-w-3xl mx-auto space-y-1 text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -465,7 +477,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <!-- Section Header -->
         <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0047ba] uppercase tracking-wide">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0047ba] uppercase tracking-wide section-title-reveal">
                 REFERENCE PROJECTS
             </h2>
         </div>
@@ -566,7 +578,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <!-- Header & Intro Copy (Enlarged) -->
         <div class="max-w-5xl mx-auto text-center mb-16 lg:mb-20">
-            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0047ba] mb-6 tracking-tight">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0047ba] mb-6 tracking-tight section-title-reveal">
                 Projects Installations
             </h2>
             <p class="text-slate-700 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-5xl mx-auto font-normal">
@@ -905,7 +917,7 @@
     <!-- Section Header (Centered Container) -->
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="text-center mb-10 lg:mb-14">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0047ba] tracking-tight">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0047ba] tracking-tight section-title-reveal">
                 Our Clients
             </h2>
         </div>
@@ -1096,7 +1108,7 @@
         
         <!-- Section Header -->
         <div class="text-center mb-14 lg:mb-16">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0047ba] tracking-tight inline-block">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0047ba] tracking-tight inline-block section-title-reveal">
                 What's New
             </h2>
         </div>
@@ -1447,6 +1459,20 @@
         showMosaicSlide(0);
         startMosaicInterval();
         preloadRemainingSlides();
+
+        // ── Scroll-reveal for section titles ──
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25 });
+
+        document.querySelectorAll('.section-title-reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
     });
 </script>
 @endsection
