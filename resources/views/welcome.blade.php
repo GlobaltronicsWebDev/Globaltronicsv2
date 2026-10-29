@@ -816,103 +816,103 @@
                 </div>
             </div>
 
-            <!-- Slide 3: Corporate, Banking & Smart Retail Systems -->
+            <!-- Slide 3: Ayala Malls & LED Installations -->
             <div class="mosaic-slide w-full shrink-0 m-0 p-0 block">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-black">
                     
-                    <!-- Column 1: Left (PSE Indoor Trading Floor + Mercedes-Benz Showroom) -->
+                    <!-- Column 1: Left (Ayala + Ayala Bell) -->
                     <div class="flex flex-col">
                         <div class="group relative overflow-hidden bg-slate-900 h-[500px] sm:h-[600px] lg:h-[680px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/pse_indoor.png') }}" 
-                                 alt="PSE Command & Trading Floor Video Wall" 
+                            <img src="{{ asset('assets/images/installations/slider3/AYALA.webp') }}"
+                                 alt="Ayala LED installation"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">PSE Command Trading Video Wall</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ayala LED Installation</span>
                             </div>
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[300px] sm:h-[360px] lg:h-[400px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/mercedes_benz.png') }}" 
-                                 alt="Mercedes-Benz Luxury Auto Showroom LED Wall" 
+                            <img src="{{ asset('assets/images/installations/slider3/Ayala bell.webp') }}"
+                                 alt="Ayala Bell LED installation"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Mercedes-Benz Showroom LED Wall</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ayala Bell LED Installation</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Column 2: Center (Adidas Megamall + ASICS BGC + Metrobank) -->
+                    <!-- Column 2: Center (Trinoma + Macapagal + Fairview Terraces) -->
                     <div class="flex flex-col">
                         <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/adidas_megamall.png') }}" 
-                                 alt="Adidas Megamall Flagship Interactive Display" 
+                            <img src="{{ asset('assets/images/installations/slider3/Ayala trinoma.webp') }}"
+                                 alt="Ayala Malls Trinoma LED installation"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Adidas Megamall Flagship Display</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ayala Malls Trinoma</span>
                             </div>
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/asics_bgc.png') }}" 
-                                 alt="ASICS Bonifacio High Street Digital Totem" 
+                            <img src="{{ asset('assets/images/installations/slider3/Ayala macapagal.webp') }}"
+                                 alt="Ayala Macapagal LED installation"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">ASICS Bonifacio High Street Totem</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ayala Macapagal LED Installation</span>
                             </div>
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/philips/metrobank.png') }}" 
-                                 alt="Metrobank Financial Center Video Wall" 
+                            <img src="{{ asset('assets/images/installations/slider3/Ayala fairview terraces.webp') }}"
+                                 alt="Ayala Malls Fairview Terraces LED installation"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Metrobank Financial Center Video Wall</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ayala Malls Fairview Terraces</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Column 3: Right (PBCom Ayala + McDonald's + KFC) -->
+                    <!-- Column 3: Right (Manila Bay + Cinema + Ayala Cinema) -->
                     <div class="flex flex-col">
                         <div class="group relative overflow-hidden bg-slate-900 h-[280px] sm:h-[340px] lg:h-[380px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/philips/pbcom_ayala.png') }}" 
-                                 alt="PBCom Tower Ayala Avenue Display" 
+                            <img src="{{ asset('assets/images/installations/slider3/Ayala Manila bay LED2.webp') }}"
+                                 alt="Ayala Malls Manila Bay LED installation"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">PBCom Tower Ayala Avenue Display</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ayala Malls Manila Bay</span>
                             </div>
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/philips/mcdonalds.png') }}" 
-                                 alt="McDonald's Digital Drive-Thru & Storefront Systems" 
+                            <img src="{{ asset('assets/images/installations/slider3/Ayala malls Cinema 1.webp') }}"
+                                 alt="Ayala Malls cinema LED installation"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">McDonald's Commercial Digital Systems</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ayala Malls Cinema LED</span>
                             </div>
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/philips/kfc.png') }}" 
-                                 alt="KFC Commercial Digital QSR Displays" 
+                            <img src="{{ asset('assets/images/installations/slider3/AYala cinema 1.webp') }}"
+                                 alt="Ayala cinema LED installation"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">KFC Commercial Digital QSR Displays</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ayala Cinema LED Installation</span>
                             </div>
                         </div>
                     </div>
