@@ -712,103 +712,103 @@
                 </div>
             </div>
 
-            <!-- Slide 2: Iconic Landmarks & Mega LED Billboards -->
+            <!-- Slide 2: Citywide LED Billboard Installations -->
             <div class="mosaic-slide w-full shrink-0 m-0 p-0 block">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-black">
                     
-                    <!-- Column 1: Left (Glorietta 3D LED + BGC Arts Center Curved Display) -->
+                    <!-- Column 1: Left (Ortigas + Malibay) -->
                     <div class="flex flex-col">
                         <div class="group relative overflow-hidden bg-slate-900 h-[500px] sm:h-[600px] lg:h-[680px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/glorietta.png') }}" 
-                                 alt="Glorietta Activity Center 3D LED Spectacular" 
+                            <img src="{{ asset('assets/images/installations/slider2/Ortigas 1 edited_08.19.22.webp') }}"
+                                 alt="Outdoor LED billboard installation in Ortigas"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Glorietta Activity Center 3D LED</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Ortigas LED Billboard</span>
                             </div>
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[300px] sm:h-[360px] lg:h-[400px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/bgc_arts_center.png') }}" 
-                                 alt="BGC Arts Center Landmark Curved Display" 
+                            <img src="{{ asset('assets/images/installations/slider2/Malibay_ EDited 2.webp') }}"
+                                 alt="Outdoor LED billboard installation in Malibay"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">BGC Arts Center Digital Monument</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Malibay LED Billboard</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Column 2: Center (Eastwood City + DoubleDragon + McKinley Hill) -->
+                    <!-- Column 2: Center (EBC + Eastwood + CBC) -->
                     <div class="flex flex-col">
                         <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/eastwood.png') }}" 
-                                 alt="Eastwood City Mega Billboard Screen" 
+                            <img src="{{ asset('assets/images/installations/slider2/EBC final.webp') }}"
+                                 alt="EBC LED display installation"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Eastwood City Mega Billboard</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">EBC LED Display</span>
                             </div>
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/double_dragon.png') }}" 
-                                 alt="DoubleDragon Plaza Landmark Highway Display" 
+                            <img src="{{ asset('assets/images/installations/slider2/Eastwood 2.webp') }}"
+                                 alt="Eastwood outdoor digital billboard"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">DoubleDragon Plaza Highway Display</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Eastwood LED Billboard</span>
                             </div>
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[270px] sm:h-[320px] lg:h-[360px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/mckinley_hills.png') }}" 
-                                 alt="Megaworld McKinley Hill Architectural LED" 
+                            <img src="{{ asset('assets/images/installations/slider2/CBC_1 new.webp') }}"
+                                 alt="CBC Asia Techzone digital billboard"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Megaworld McKinley Hill Display</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">CBC Asia Techzone LED</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Column 3: Right (PSE BGC Outdoor + MOA SMX + Solaire Resort) -->
+                    <!-- Column 3: Right (CBC + Bacoor + Arthur Lucero) -->
                     <div class="flex flex-col">
                         <div class="group relative overflow-hidden bg-slate-900 h-[280px] sm:h-[340px] lg:h-[380px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/pse_outdoor.png') }}" 
-                                 alt="Philippine Stock Exchange BGC Tower Outdoor Display" 
+                            <img src="{{ asset('assets/images/installations/slider2/CBC_2.webp') }}"
+                                 alt="CBC Asia Techzone outdoor digital display"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">PSE Tower BGC Outdoor LED</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">CBC Asia Techzone LED</span>
                             </div>
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/moa_smx.png') }}" 
-                                 alt="SM Mall of Asia SMX Convention LED Display" 
+                            <img src="{{ asset('assets/images/installations/slider2/BACOORXCBC_06.30.23.webp') }}"
+                                 alt="Bacoor and CBC digital billboard installation"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">SM Mall of Asia SMX LED</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Bacoor x CBC LED Billboard</span>
                             </div>
                         </div>
 
                         <div class="group relative overflow-hidden bg-slate-900 h-[260px] sm:h-[310px] lg:h-[350px] cursor-pointer">
-                            <img src="{{ asset('assets/images/projects/led/solaire.png') }}" 
-                                 alt="Solaire Resort & Entertainment City Display" 
+                            <img src="{{ asset('assets/images/installations/slider2/Arthur Lucero 1 edited.png') }}"
+                                 alt="LED billboard installation by Arthur Lucero"
                                  loading="lazy"
                                  decoding="async"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">Solaire Resort Entertainment LED</span>
+                                <span class="text-white text-sm sm:text-base font-bold uppercase tracking-wider bg-black/60 px-5 py-2 rounded-full backdrop-blur-md border border-white/20">LED Billboard Installation</span>
                             </div>
                         </div>
                     </div>
