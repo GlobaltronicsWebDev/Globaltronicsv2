@@ -127,16 +127,18 @@
             <div class="hidden lg:flex items-center space-x-3 shrink-0">
                 @auth
                     <a href="{{ route('admin.news.index') }}" 
-                       class="relative group w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0047ba] hover:bg-yellow-400 hover:text-slate-950 active:scale-90 transition-all duration-300 shadow-md" 
-                       title="CMS Dashboard">
-                        <i class="fa-solid fa-right-to-bracket text-[18px] group-hover:scale-110 transition-transform duration-300"></i>
-                        <span class="absolute -top-0.5 -right-0.5 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white shadow-sm" title="Logged in as Admin"></span>
+                       class="nav-accessible-hidden relative group w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0047ba] hover:bg-yellow-400 hover:text-slate-950 active:scale-90 transition-all duration-300 shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-300"
+                       aria-label="CMS Dashboard">
+                        <i class="fa-solid fa-right-to-bracket text-[18px] group-hover:scale-110 transition-transform duration-300" aria-hidden="true"></i>
+                        <span class="sr-only">CMS Dashboard</span>
+                        <span class="absolute -top-0.5 -right-0.5 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white shadow-sm" aria-hidden="true"></span>
                     </a>
                 @else
                     <a href="{{ route('admin.login') }}" 
-                       class="group w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0047ba] hover:bg-yellow-400 hover:text-slate-950 active:scale-90 transition-all duration-300 shadow-md" 
-                       title="Admin CMS Login">
-                        <i class="fa-solid fa-right-to-bracket text-[18px] group-hover:scale-110 transition-transform duration-300"></i>
+                       class="nav-accessible-hidden group w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0047ba] hover:bg-yellow-400 hover:text-slate-950 active:scale-90 transition-all duration-300 shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-300"
+                       aria-label="Admin CMS Login">
+                        <i class="fa-solid fa-right-to-bracket text-[18px] group-hover:scale-110 transition-transform duration-300" aria-hidden="true"></i>
+                        <span class="sr-only">Admin CMS Login</span>
                     </a>
                 @endauth
 
