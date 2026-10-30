@@ -86,7 +86,7 @@
 
                 <!-- Perk 2 -->
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:shadow-md transition-all">
-                    <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg mb-4">
+                    <div class="w-11 h-11 rounded-xl  bg-blue-100 text-emerald-600 flex items-center justify-center text-lg mb-4">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">Innovation & Tech</h3>
@@ -97,7 +97,7 @@
 
                 <!-- Perk 3 -->
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:shadow-md transition-all">
-                    <div class="w-11 h-11 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-lg mb-4">
+                    <div class="w-11 h-11 rounded-xl  bg-blue-100 text-purple-600 flex items-center justify-center text-lg mb-4">
                         <i class="fa-solid fa-people-group"></i>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">Collaborative Culture</h3>
@@ -108,7 +108,7 @@
 
                 <!-- Perk 4 -->
                 <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 hover:shadow-md transition-all">
-                    <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg mb-4">
+                    <div class="w-11 h-11 rounded-xl  bg-blue-100 text-amber-600 flex items-center justify-center text-lg mb-4">
                         <i class="fa-solid fa-award"></i>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">Competitive Benefits</h3>
