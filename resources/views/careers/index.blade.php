@@ -44,15 +44,15 @@
                     <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Years of Excellence</p>
                 </div>
                 <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm text-center">
-                    <p class="stat-counter text-2xl sm:text-3xl font-black text-emerald-600 mb-1" data-target="100" data-suffix="+">100+</p>
+                    <p class="stat-counter text-2xl sm:text-3xl font-black text-[#0047ba] mb-1" data-target="100" data-suffix="+">100+</p>
                     <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Nationwide Sites</p>
                 </div>
                 <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm text-center">
-                    <p class="stat-counter text-2xl sm:text-3xl font-black text-purple-600 mb-1" data-target="100" data-suffix="%">100%</p>
+                    <p class="stat-counter text-2xl sm:text-3xl font-black text-[#0047ba] mb-1" data-target="100" data-suffix="%">100%</p>
                     <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Filipino Innovation</p>
                 </div>
                 <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm text-center">
-                    <p class="stat-counter text-2xl sm:text-3xl font-black text-amber-500 mb-1" data-target="{{ $careers->count() }}" data-suffix="">{{ $careers->count() }}</p>
+                    <p class="stat-counter text-2xl sm:text-3xl font-black text-[#0047ba] mb-1" data-target="{{ $careers->count() }}" data-suffix="">{{ $careers->count() }}</p>
                     <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Open Positions</p>
                 </div>
             </div>
