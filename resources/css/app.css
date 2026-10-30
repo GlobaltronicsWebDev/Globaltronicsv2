@@ -28,6 +28,52 @@ body {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-out;
 }
 
+@keyframes careerWordFadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes careerWordFadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.career-hero-word {
+    display: inline-block;
+    opacity: 0;
+    animation-duration: 800ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: forwards;
+}
+
+.career-hero-word--right {
+    animation-name: careerWordFadeRight;
+}
+
+.career-hero-word--left {
+    animation-name: careerWordFadeLeft;
+    animation-delay: 150ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .career-hero-word {
+        opacity: 1;
+        animation: none;
+    }
+}
+
 /* Continuous Infinite Client Logo Marquee */
 @keyframes logoMarquee {
     0% {

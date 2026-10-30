@@ -30,7 +30,7 @@
 
             <!-- Main Heading -->
             <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-950 mb-6 tracking-tight max-w-4xl mx-auto leading-tight">
-                Build the Future of <span class="text-[#0047ba]">Digital Media & LED</span> Innovation
+                Build the Future of <span class="career-hero-word career-hero-word--right text-[#0047ba]">Digital</span> <span class="career-hero-word career-hero-word--left text-[#0047ba]">Media &amp; LED</span> Innovation
             </h1>
 
             <p class="text-slate-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed font-normal mb-10">
