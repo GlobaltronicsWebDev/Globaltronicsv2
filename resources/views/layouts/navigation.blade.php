@@ -52,11 +52,11 @@
 
             <!-- Desktop Navigation Menu (PERFECTLY CENTER ALIGNED) -->
             <div class="hidden lg:flex flex-1 items-center justify-center  -translate-x-12 xl:-translate-x-16 space-x-1 lg:space-x-2 xl:space-x-3  text-[11px] xl:text-[15px] font-bold tracking-tight uppercase font-sans">
-                <a href="{{ url('/') }}" class="py-2 px-1 text-white hover:text-white-300 transition-colors border-b-2 border-transparent hover:border-yellow-300 whitespace-nowrap">
+                <a href="{{ url('/') }}" class="py-2 px-1 text-white hover:text-white-300 transition-colors border-b-2 border-transparent hover:border-white-300 whitespace-nowrap">
                     HOME
                 </a>
-
-                <!-- About Menu Link & Dropdown -->
+                    
+                <!-- About Menu Link & Dropdown -->                                                                                                                             
                 <div class="relative group">
                     <a href="{{ route('about') }}" target="_blank" class="flex items-center space-x-1 py-2 px-1 text-white hover:text-white-300 transition-colors border-b-2 {{ request()->routeIs('about') ? 'border-yellow-300 text-yellow-300' : 'border-transparent hover:border-yellow-300' }} whitespace-nowrap">
                         <span>ABOUT</span>
