@@ -118,7 +118,7 @@
                     CAREERS
                 </a>
 
-                <a href="{{ url('/#contact') }}" onclick="if(typeof openQuoteModal === 'function') { openQuoteModal(); return false; }" class="py-2 px-1 text-white hover:text-yellow-300 transition-colors border-b-2 border-transparent hover:border-yellow-300 whitespace-nowrap cursor-pointer">
+                <a href="{{ url('/#contact') }}" onclick="if(typeof openQuoteModal === 'function') { openQuoteModal(); return false; }" class="py-2 px-1 text-white hover:text-white-300 transition-colors border-b-2 border-transparent hover:border-yellow-300 whitespace-nowrap cursor-pointer">
                     CONTACT US
                 </a>
             </div>
