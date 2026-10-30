@@ -94,7 +94,7 @@
 
                 <!-- Solutions Dropdown -->
                 <div class="relative group">
-                    <button class="flex items-center space-x-1 py-2 px-1 text-white hover:text-white-300 transition-colors border-b-2 border-transparent hover:border-white-300 focus:outline-none whitespace-nowrap">
+                    <button class="flex items-center space-x-1 py-2 px-1 text-white hover:text-white-300 transition-colors border-b-2 border-transparent hover:border-yellow-300 focus:outline-none whitespace-nowrap">
                         <span>SOLUTIONS</span>
                         <svg class="transition-transform duration-200 group-hover:rotate-180 shrink-0 text-current inline-block" style="width: 10px; height: 10px; min-width: 10px; max-width: 10px; min-height: 10px; max-height: 10px; margin-left: 4px;" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
